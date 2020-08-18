@@ -9,4 +9,18 @@ xargsvim() {
     xargs "$@" "$SHELL" -c '</dev/tty vim "$@"' ignoreme
 }
 
+function shtart() {
+    nohup $@ >/dev/null 2>&1 &!
+}
+compdef _shtart shtart
+
+function _shtart() {
+    local -a args
+    args=(
+        '(-)1:command: _command_names -e'
+        '*::arguments:{ _normal }'
+    )
+    _arguments -s -S $args
+}
+
 # vim : filetype=zsh
