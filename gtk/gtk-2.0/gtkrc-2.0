@@ -1,0 +1,8 @@
+include "/usr/share/themes/Arc-Dark/gtk-2.0/gtkrc"
+style "user-font"
+{
+	font_name="Fira Code"
+}
+widget_class "*" style "user-font"
+gtk-font-name="Fira Code 9"
+gtk-icon-theme-name="Arc"

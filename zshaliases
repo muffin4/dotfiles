@@ -1,0 +1,28 @@
+alias ls='ls --color=auto --group-directories-first'
+alias la='ls -A'
+alias l='ls -lh'
+alias ll='ls -lh'
+alias lla='ls -lhA'
+alias date_clean='date +%F_%H-%M-%S'
+alias mv='mv --interactive'
+alias cp='cp --interactive'
+alias tuxsay='cowsay -f tux'
+alias sl='ls'
+alias ..='cd ..'
+alias ../..='cd ../..'
+alias 'steamlib=find ~/.steam/root/ \( -name "libgpg-error.so*" -o -name "libstdc++.so*" \) -print -delete'
+alias 'py=python'
+alias ra=ranger
+alias pamcan=pacman
+alias whodis=whoami
+alias g=git
+alias no='yes n'
+alias cal='cal --monday'
+alias grep='grep --color=auto'
+alias diff="diff --color=auto"
+alias bc="bc --mathlib"
+
+alias tmuxdotties='tmux new -c ~/dotfiles -s dotties -A'
+
+alias -s mp4=mpv
+alias -s m3u=mpv

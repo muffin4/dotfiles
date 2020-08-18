@@ -1,0 +1,52 @@
+- defaults:
+    link:
+        relink: true
+        relative: true
+        create: true
+        force: false
+
+- clean: ['~']
+
+- clean:
+    ~/.config:
+        force: true
+
+- link:
+    ~/.gtkrc-2.0: gtk/gtk-2.0/gtkrc-2.0
+    ~/.config/gtk-3.0: gtk/gtk-3.0
+    ~/.config/khal:
+    ~/.config/kitty:
+    ~/.config/mpv:
+    ~/.config/ranger:
+    ~/.config/rofi:
+    ~/.config/systemd:
+    ~/.config/user-dirs.dirs:
+    ~/.scripts:
+    ~/.bashrc:
+    ~/.ssh:
+    ~/.vim:
+    ~/.icons:
+    ~/.ideavimrc:
+    ~/.Xresources.d:
+    ~/.lesskey:
+    ~/.profile:
+    ~/.tmux.conf:
+    ~/.Xdefaults:
+    ~/.xinitrc:
+    ~/.xprofile:
+    ~/.xset:
+    ~/.zprofile:
+    ~/.zshaliases:
+    ~/.zshenv:
+    ~/.zshfunctions:
+    ~/.zshrc:
+    ~/.gitconfig:
+    ~/.gnupg:
+    ~/.abcde.conf:
+    ~/.zsh:
+
+- shell:
+    - [mkdir -p ~/.tmp/, Creating ~/.tmp/ directory]
+    - [git submodule update --init --recursive, Installing submodules]
+    - [lesskey, Loading lesskey configuration]
+    - [xdg-mime default org.gnome.Evince.desktop application/pdf, Making evince the default application for pdf files]

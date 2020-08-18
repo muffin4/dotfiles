@@ -1,0 +1,33 @@
+[alias]
+	new = !git init && git symbolic-ref HEAD refs/heads/main
+    b = branch
+    rest = restore
+    sw = switch
+    cm = commit
+    cmm = commit --amend
+    st = status
+    d = diff
+    dc = diff --cached
+    unmerged = diff --diff-filter=U --name-only
+    logg = log --graph
+    logo = log --oneline
+    loggo = log --graph --oneline
+    ff = merge --ff-only
+    rb = rebase
+    l = log --graph --oneline
+[core]
+	pager = less --tabs=4 --RAW-CONTROL-CHARS --quit-if-one-screen
+[pager]
+    status = true
+[log]
+    follow = True
+    date=auto:human
+[branch]
+    sort = -authordate
+[advice]
+	detachedHead = false
+[tag]
+	sort = version:refname
+[pull]
+	ff = only
+# vim: filetype=gitconfig

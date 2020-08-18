@@ -1,0 +1,12 @@
+sleepuntil() {
+    if [[ "$#" != 1 ]] ; then echo "Usage: sleepuntil timestamp" ; return 1 ; fi
+    local then="$(date -d "$1" +%s)"
+    local now="$(date +%s)"
+    sleep "$(( $then - $now ))"
+}
+
+xargsvim() {
+    xargs "$@" "$SHELL" -c '</dev/tty vim "$@"' ignoreme
+}
+
+# vim : filetype=zsh

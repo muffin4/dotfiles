@@ -1,0 +1,27 @@
+[submodule "vim/bundle/fugitive"]
+	path = vim/pack/isa/start/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/bundle/ctrlp"]
+	path = vim/pack/isa/start/ctrlp
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "vim/bundle/surround"]
+	path = vim/pack/isa/start/surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/bundle/nerdtree"]
+	path = vim/pack/isa/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/bundle/visual-star-search"]
+	path = vim/pack/isa/start/visual-star-search
+	url = https://github.com/bronson/vim-visual-star-search.git
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+[submodule "vim/pack/isa/start/repeat"]
+	path = vim/pack/isa/start/repeat
+	url = https://tpope.io/vim/repeat.git
+[submodule "vim/pack/isa/start/dispatch"]
+	path = vim/pack/isa/start/dispatch
+	url = https://tpope.io/vim/dispatch.git
+[submodule "vim/pack/isa/start/happy_hacking"]
+	path = vim/pack/isa/start/happy_hacking
+	url = https://github.com/YorickPeterse/happy_hacking.vim.git

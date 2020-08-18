@@ -1,0 +1,2 @@
+#env
+LESS = --ignore-case --raw-control-chars --tabs=4

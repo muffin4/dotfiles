@@ -1,0 +1,2 @@
+#!/bin/sh
+xset r rate 250 25 mouse 1/1 0 s off -dpms b off

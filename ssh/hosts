@@ -1,0 +1,10 @@
+Host schokobier schokobier.de
+    Hostname schokobier.de
+    port 2244
+    User schokobier
+
+Host schokobier-old
+    Hostname 176.96.139.22
+    User metalfloouu
+
+# vim: filetype=sshconfig
