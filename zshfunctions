@@ -1,20 +1,20 @@
-sleepuntil() {
+sleepuntil () {
     if [[ "$#" != 1 ]] ; then echo "Usage: sleepuntil timestamp" ; return 1 ; fi
     local then="$(date -d "$1" +%s)"
     local now="$(date +%s)"
     sleep "$(( $then - $now ))"
 }
 
-xargsvim() {
+xargsvim () {
     xargs "$@" "$SHELL" -c '</dev/tty vim "$@"' ignoreme
 }
 
-function shtart() {
+shtart () {
     nohup $@ >/dev/null 2>&1 &!
 }
 
 compdef _shtart shtart
-function _shtart() {
+_shtart () {
     local -a args
     args=(
         '(-)1:command: _command_names -e'

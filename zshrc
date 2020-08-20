@@ -14,7 +14,7 @@ compinit
 
 kitty + complete setup zsh | source /dev/stdin
 
-function prepend-sudo {
+prepend-sudo () {
     if [[ "$BUFFER" != "sudo "* ]]
     then
         BUFFER="sudo $BUFFER"
@@ -56,7 +56,7 @@ vcs_info_wrapper() {
   fi
 }
 
-function check_last_exit_code() {
+check_last_exit_code () {
     local LAST_EXIT_CODE=$?
     if [[ "$LAST_EXIT_CODE" -ne 0 ]]; then
         local EXIT_CODE_PROMPT=''
