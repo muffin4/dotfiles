@@ -12,8 +12,8 @@ xargsvim() {
 function shtart() {
     nohup $@ >/dev/null 2>&1 &!
 }
-compdef _shtart shtart
 
+compdef _shtart shtart
 function _shtart() {
     local -a args
     args=(
