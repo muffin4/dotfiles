@@ -43,7 +43,7 @@ class Passmenu:
 
     def get_command_line(self):
         prompt = self.get_prompt()
-        command_line = ['rofi', '-dmenu', '-p', prompt]
+        command_line = ['rofi', '-dmenu', '-p', prompt, '-no-show-match']
         if self.matching:
             command_line += ['-matching', self.matching]
         return command_line
