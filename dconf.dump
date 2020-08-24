@@ -3,7 +3,7 @@ temperature-unit='centigrade'
 
 [org/gnome/desktop/input-sources]
 sources=[('xkb', 'us+colemak'), ('xkb', 'us')]
-xkb-options=['lv3:ralt_switch', 'caps:ctrl_modifier']
+xkb-options=['lv3:ralt_switch', 'ctrl:swapcaps']
 
 [org/gnome/desktop/interface]
 clock-show-seconds=true
