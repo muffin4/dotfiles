@@ -35,11 +35,6 @@
     ~/.xinitrc:
     ~/.xprofile:
     ~/.xset:
-    ~/.zprofile:
-    ~/.zshaliases:
-    ~/.zshenv:
-    ~/.zshfunctions:
-    ~/.zshrc:
     ~/.gitconfig:
     ~/.gnupg:
     ~/.abcde.conf:

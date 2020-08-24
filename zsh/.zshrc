@@ -79,12 +79,12 @@ stty stop undef
 stty start undef
 
 # load aliases
-[[ -r ~/.zshaliases ]] && source ~/.zshaliases
+[[ -r $ZDOTDIR/.zshaliases ]] && source $ZDOTDIR/.zshaliases
 
-[[ -r ~/.zshrc.local ]] && source ~/.zshrc.local
+[[ -r $ZDOTDIR/.zshrc.local ]] && source $ZDOTDIR/.zshrc.local
 
 # load functions
-[[ -r ~/.zshfunctions ]] && source ~/.zshfunctions
+[[ -r $ZDOTDIR/.zshfunctions ]] && source $ZDOTDIR/.zshfunctions
 
 if [ -n "$VIRTUAL_ENV" ]; then
     source "$VIRTUAL_ENV/bin/activate"
