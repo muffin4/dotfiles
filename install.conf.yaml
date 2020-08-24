@@ -35,6 +35,7 @@
     ~/.xinitrc:
     ~/.xprofile:
     ~/.xset:
+    ~/.zshenv:
     ~/.gitconfig:
     ~/.gnupg:
     ~/.abcde.conf:
