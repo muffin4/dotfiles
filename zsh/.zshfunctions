@@ -23,3 +23,10 @@ _shtart () {
     )
     _arguments -s -S $args
 }
+
+grep () {
+    eval set -A args $(getopt --longoptions recursive,dereference-recursive --options rR --quiet -- "$@")
+    [[ "${args[1]}" != -- ]] && { printf "using %s with grep is forbidden!\n" "${args[1]}" ; return 1 }
+    /usr/bin/grep "$@"
+    return $?
+}
