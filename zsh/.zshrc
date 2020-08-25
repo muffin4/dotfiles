@@ -78,13 +78,14 @@ precmd () {print -Pn "\e]0;%n@%m: %~\a"}
 stty stop undef
 stty start undef
 
-# load aliases
-[[ -r $ZDOTDIR/.zshaliases ]] && source $ZDOTDIR/.zshaliases
-
+# load local zshrc
 [[ -r $ZDOTDIR/.zshrc.local ]] && source $ZDOTDIR/.zshrc.local
 
 # load functions
 [[ -r $ZDOTDIR/.zshfunctions ]] && source $ZDOTDIR/.zshfunctions
+
+# load aliases
+[[ -r $ZDOTDIR/.zshaliases ]] && source $ZDOTDIR/.zshaliases
 
 if [ -n "$VIRTUAL_ENV" ]; then
     source "$VIRTUAL_ENV/bin/activate"
