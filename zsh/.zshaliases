@@ -18,7 +18,7 @@ alias whodis=whoami
 alias g=git
 alias no='yes n'
 alias cal='cal --monday'
-alias grep='grep --color=auto'
+alias -g grep='grep --color=auto'
 alias diff="diff --color=auto"
 alias bc="bc --mathlib"
 
