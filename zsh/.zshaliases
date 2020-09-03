@@ -23,6 +23,9 @@ alias diff="diff --color=auto"
 alias bc="bc --mathlib"
 alias hibernate="systemctl hibernate"
 alias "sudo vim"=sudoedit
+alias "sudo kak"=sudoedit
+alias "sudo k"=sudoedit
+alias k=kak
 
 alias tmuxdotties='tmux new -c ~/dotfiles -s dotties -A'
 

@@ -4,6 +4,7 @@ programs=(
     pacman-contrib # rankmirros
     gvim
     vim-jedi # plugin for python autocompletion
+    kakoune # code editor
     rofi # window switcher, application launcher
     firefox # emergency web browser
     git
