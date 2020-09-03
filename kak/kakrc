@@ -1,4 +1,5 @@
 set-option global startup_info_version 20200901
+add-highlighter global/ number-lines -relative -separator " " -hlcursor -min-digits 3
 
 # case insensitive search
 map global -docstring "case insensitive search" normal / /(?i)
