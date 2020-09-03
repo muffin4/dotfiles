@@ -1,1 +1,5 @@
 set-option global startup_info_version 20200901
+
+# case insensitive search
+map global -docstring "case insensitive search" normal / /(?i)
+map global -docstring "case insensitive backwards search" normal <a-/> <a-/>(?i)
