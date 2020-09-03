@@ -22,6 +22,7 @@ alias -g grep='grep --color=auto'
 alias diff="diff --color=auto"
 alias bc="bc --mathlib"
 alias hibernate="systemctl hibernate"
+alias "sudo vim"=sudoedit
 
 alias tmuxdotties='tmux new -c ~/dotfiles -s dotties -A'
 
