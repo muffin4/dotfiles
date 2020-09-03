@@ -1,6 +1,11 @@
 set-option global startup_info_version 20200901
 add-highlighter global/ number-lines -relative -separator " " -hlcursor -min-digits 3
 
+# copy to X11 clipboard
+hook global RegisterModified '"' %{ nop %sh{
+    printf %s "$kak_main_reg_dquote" | xclip -in -selection clipboard >&- 2>&-
+}}
+
 # case insensitive search
 map global -docstring "case insensitive search" normal / /(?i)
 map global -docstring "case insensitive backwards search" normal <a-/> <a-/>(?i)
