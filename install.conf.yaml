@@ -21,6 +21,7 @@
     ~/.config/rofi:
     ~/.config/systemd:
     ~/.config/user-dirs.dirs:
+        force: true
     ~/.scripts:
     ~/.bashrc:
     ~/.ssh:
