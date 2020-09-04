@@ -1,6 +1,7 @@
 # Lines configured by zsh-newuser-install
 unset HISTFILE
 setopt appendhistory notify prompt_subst
+setopt histignorespace  # remove command lines starting with a space form the history list
 unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
