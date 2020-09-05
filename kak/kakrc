@@ -1,0 +1,17 @@
+set-option global startup_info_version 20200901
+add-highlighter global/ number-lines -relative -separator " " -hlcursor -min-digits 3
+
+# copy to X11 clipboard
+hook global RegisterModified '"' %{ nop %sh{
+    [ -n "$TMUX" ] && tmux set-buffer -- "$kak_main_reg_dquote"
+    [ -n "$DISPLAY" ] && printf %s "$kak_main_reg_dquote" | xclip -in -selection clipboard >&- 2>&-
+}}
+
+# case insensitive search
+map global -docstring "case insensitive search" normal / /(?i)
+map global -docstring "case insensitive backwards search" normal <a-/> <a-/>(?i)
+
+# save and quit
+map global -docstring "write buffer" user w :w<ret>
+map global -docstring "quit" user q :q<ret>
+map global -docstring "save and quit" user z :wq<ret>
