@@ -163,6 +163,15 @@ if has('xterm_clipboard')
         set clipboard=unnamed
     endif
 endif
+" copy to tmux buffer
+if has('autocmd') && has_key(environ(), "TMUX")
+    function YankToTmux()
+        if (v:event["regname"] == "") || (v:event["regname"] == "+")
+            call system("tmux set-buffer -- " . v:event["regcontents"]->join("\n")->shellescape())
+        endif
+    endfunction
+    autocmd TextYankPost * call YankToTmux()
+endif
 nnoremap <leader>p o<esc>p
 nnoremap <leader>P O<esc>p
 " }}}
