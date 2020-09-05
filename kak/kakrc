@@ -3,7 +3,7 @@ add-highlighter global/ number-lines -relative -separator " " -hlcursor -min-dig
 
 # copy to X11 clipboard
 hook global RegisterModified '"' %{ nop %sh{
-    printf %s "$kak_main_reg_dquote" | xclip -in -selection clipboard >&- 2>&-
+    [ -n "$DISPLAY" ] && printf %s "$kak_main_reg_dquote" | xclip -in -selection clipboard >&- 2>&-
 }}
 
 # case insensitive search
