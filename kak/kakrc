@@ -17,8 +17,3 @@ hook global RegisterModified '"' %{ nop %sh{
 # case insensitive search
 map global -docstring "case insensitive search" normal / /(?i)
 map global -docstring "case insensitive backwards search" normal <a-/> <a-/>(?i)
-
-# save and quit
-map global -docstring "write buffer" user w :w<ret>
-map global -docstring "quit" user q :q<ret>
-map global -docstring "save and quit" user z :wq<ret>
