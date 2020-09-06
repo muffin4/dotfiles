@@ -4,6 +4,10 @@ add-highlighter global/ number-lines -relative -separator " " -hlcursor -min-dig
 # delete with D aswell for convenience
 map global -docstring "delete" normal D d
 
+# scrolling
+map global -docstring "scroll down" normal <c-e> vj
+map global -docstring "scroll up" normal <c-y> vk
+
 # copy to X11 clipboard
 hook global RegisterModified '"' %{ nop %sh{
     [ -n "$TMUX" ] && tmux set-buffer -- "$kak_main_reg_dquote"
