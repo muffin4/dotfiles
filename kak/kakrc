@@ -17,6 +17,9 @@ hook global RegisterModified '"' %{ nop %sh{
     [ -n "$TMUX" ] && tmux set-buffer -- "$kak_main_reg_dquote"
     [ -n "$DISPLAY" ] && printf %s "$kak_main_reg_dquote" | xclip -in -selection clipboard >&- 2>&-
 }}
+# paste from X11 clipboard
+map -docstring "paste before" global user P "!xclip -out -selection clipboard<ret>"
+map -docstring "paste after" global user p "<a-!>xclip -out -selection clipboard<ret>"
 
 # case insensitive search
 map -docstring "case insensitive search" global normal / /(?i)
