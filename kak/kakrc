@@ -1,3 +1,7 @@
+# install plug.kak plugin that manages plugins
+source "%val{config}/plugins/plug.kak/rc/plug.kak"
+plug "robertmeta/plug.kak" noload
+
 set-option global startup_info_version 20200901
 add-highlighter global/ number-lines -relative -separator " " -hlcursor -min-digits 3
 

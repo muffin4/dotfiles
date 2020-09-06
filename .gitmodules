@@ -25,3 +25,6 @@
 [submodule "vim/pack/isa/start/happy_hacking"]
 	path = vim/pack/isa/start/happy_hacking
 	url = https://github.com/YorickPeterse/happy_hacking.vim.git
+[submodule "kak/plugins/plug.kak"]
+	path = kak/plugins/plug.kak
+	url = https://github.com/robertmeta/plug.kak.git
