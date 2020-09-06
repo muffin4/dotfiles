@@ -1,6 +1,9 @@
 set-option global startup_info_version 20200901
 add-highlighter global/ number-lines -relative -separator " " -hlcursor -min-digits 3
 
+# delete with D aswell for convenience
+map global -docstring "delete" normal D d
+
 # copy to X11 clipboard
 hook global RegisterModified '"' %{ nop %sh{
     [ -n "$TMUX" ] && tmux set-buffer -- "$kak_main_reg_dquote"
