@@ -6,11 +6,11 @@ set-option global startup_info_version 20200901
 add-highlighter global/ number-lines -relative -separator " " -hlcursor -min-digits 3
 
 # delete with D aswell for convenience
-map global -docstring "delete" normal D d
+map -docstring "delete" global normal D d
 
 # scrolling
-map global -docstring "scroll down" normal <c-e> vj
-map global -docstring "scroll up" normal <c-y> vk
+map -docstring "scroll down" global normal <c-e> vj
+map -docstring "scroll up" global normal <c-y> vk
 
 # copy to X11 clipboard
 hook global RegisterModified '"' %{ nop %sh{
@@ -19,5 +19,5 @@ hook global RegisterModified '"' %{ nop %sh{
 }}
 
 # case insensitive search
-map global -docstring "case insensitive search" normal / /(?i)
-map global -docstring "case insensitive backwards search" normal <a-/> <a-/>(?i)
+map -docstring "case insensitive search" global normal / /(?i)
+map -docstring "case insensitive backwards search" global normal <a-/> <a-/>(?i)
