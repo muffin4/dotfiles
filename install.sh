@@ -49,14 +49,21 @@ programs=(
     pulseaudio-alsa # alsa configuration for pulseaudio
     pavucontrol # graphical control panel for pulseaudio
     tmux # terminal multiplexer
-    ntp # network time protocol for setting time, don't forget to enable ntpd
+    ntp # network time protocol for setting time
     inetutils # includes `hostname` required for rsync-backup
     bc # a basic calculator for the terminal
 )
 aur_progs=(
+)
+services=(
+    ntpd.service
 )
 
 if ! pacman -Qq yay 1>&- ; then
     git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -sri
 fi
 yay -S --needed "${programs[@]}" "${aur_progs[@]}"
+
+for service in "${services[@]}" ; do
+    systemctl is-enabled --quiet "$service" || sudo systemctl enable "$service"
+done
