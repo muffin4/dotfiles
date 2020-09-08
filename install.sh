@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -euv
+set -eu
 programs=(
     pacman-contrib # rankmirros
     gvim
@@ -56,7 +56,7 @@ programs=(
 aur_progs=(
 )
 
-if ! pacman -Qq yay ; then
+if ! pacman -Qq yay 1>&- ; then
     git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -sri
 fi
 yay -S --needed "${programs[@]}" "${aur_progs[@]}"
