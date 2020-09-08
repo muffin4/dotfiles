@@ -52,11 +52,13 @@ programs=(
     ntp # network time protocol for setting time
     inetutils # includes `hostname` required for rsync-backup
     bc # a basic calculator for the terminal
+    earlyoom # Early OOM Daemon for Linux
 )
 aur_progs=(
 )
 services=(
     ntpd.service
+    earlyoom.service
 )
 
 if ! pacman -Qq yay 1>&- ; then
