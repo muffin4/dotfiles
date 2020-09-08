@@ -62,7 +62,7 @@ services=(
 )
 
 if ! pacman -Qq yay 1>&- ; then
-    git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -sri
+    git clone https://aur.archlinux.org/yay.git && ( cd yay && makepkg -sri )
 fi
 yay -S --needed "${programs[@]}" "${aur_progs[@]}"
 
