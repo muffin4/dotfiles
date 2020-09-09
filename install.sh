@@ -53,6 +53,7 @@ programs=(
     inetutils # includes `hostname` required for rsync-backup
     bc # a basic calculator for the terminal
     earlyoom # Early OOM Daemon for Linux
+    lolcat # queer culture
 )
 aur_progs=(
 )
