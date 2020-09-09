@@ -15,6 +15,10 @@ icon-theme='Arc'
 monospace-font-name='Fira Code 10'
 show-battery-percentage=true
 
+[org/gnome/desktop/peripherals/keyboard]
+delay=uint32 250
+repeat-interval=uint32 25
+
 [org/gnome/desktop/session]
 idle-delay=uint32 0
 
