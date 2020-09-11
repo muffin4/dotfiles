@@ -33,3 +33,10 @@ grep () {
 cat () {
     if [ -t 1 ] && command -v lolcat >&- ; then lolcat "$@" ; else command cat "$@" ; fi
 }
+
+sudo () {
+    case $1 in
+    vim) shift ; sudoedit "$@" ;;
+    *) command sudo "$@" ;;
+    esac
+}
