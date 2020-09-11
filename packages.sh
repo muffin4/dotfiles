@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 set -eu
 programs=(
     pacman-contrib # rankmirros
@@ -57,16 +57,8 @@ programs=(
 )
 aur_progs=(
 )
-services=(
-    ntpd.service
-    earlyoom.service
-)
 
 if ! command -v yay 1>&- ; then
     git clone https://aur.archlinux.org/yay.git && ( cd yay && makepkg -sri )
 fi
 yay -S --needed "${programs[@]}" "${aur_progs[@]}"
-
-for service in "${services[@]}" ; do
-    systemctl is-enabled --quiet "$service" || sudo systemctl enable "$service"
-done
