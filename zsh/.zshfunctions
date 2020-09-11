@@ -31,5 +31,5 @@ grep () {
 }
 
 cat () {
-    if [ -t 1 ] && command -v lolcat >&- ; then lolcat "$@" ; else command -p cat "$@" ; fi
+    if [ -t 1 ] && command -v lolcat >&- ; then lolcat "$@" ; else command cat "$@" ; fi
 }
