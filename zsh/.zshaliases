@@ -18,7 +18,7 @@ alias whodis=whoami
 alias g=git
 alias no='yes n'
 alias cal='cal --monday'
-alias -g grep='grep --color=auto'
+alias -g grep='grep --color=auto --binary-files=without-match'
 alias diff="diff --color=auto"
 alias bc="bc --mathlib"
 alias hibernate="systemctl hibernate"
