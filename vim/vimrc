@@ -60,7 +60,7 @@ if &t_Co > 2 || has("gui_running")
     set guifont=Courier_New:h10:cANSI:qDRAFT
   else
     colorscheme happy_hacking
-    set guifont=Liberation\ Mono\ 10
+    set guifont=Fira\ Code\ 10
   endif
   highlight Normal guibg=NONE ctermbg=NONE
 endif
