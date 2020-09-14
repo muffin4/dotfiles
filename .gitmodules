@@ -31,3 +31,6 @@
 [submodule "kitty/kitty-themes"]
 	path = kitty/kitty-themes
 	url = https://github.com/dexpota/kitty-themes.git
+[submodule "vim/pack/isa/start/angr.vim"]
+	path = vim/pack/isa/start/angr.vim
+	url = git@gitlab.com:isa4/angr.vim.git
