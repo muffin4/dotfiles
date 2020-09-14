@@ -59,12 +59,8 @@ if &t_Co > 2 || has("gui_running")
     colorscheme desert
     set guifont=Courier_New:h10:cANSI:qDRAFT
   else
-    if has("gui_running")
-        colorscheme evening
-    else
-        colorscheme happy_hacking
-        highlight Normal ctermbg=NONE
-    endif
+    colorscheme happy_hacking
+    highlight Normal ctermbg=NONE
     set guifont=Fira\ Code\ 10
   endif
 endif
