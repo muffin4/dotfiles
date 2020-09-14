@@ -24,8 +24,6 @@ programs=(
     arc-icon-theme
     xclip # for clipboard related commands in tmux and i3
     evince # pdf viewer
-    ranger # file manager
-    w3m # for image preview in ranger
     thunar # graphical file manager
     tumbler # image preview in thunar 
     openssh # ssh and sshd
