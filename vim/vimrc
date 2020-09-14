@@ -59,8 +59,6 @@ if &t_Co > 2 || has("gui_running")
     colorscheme desert
     set guifont=Courier_New:h10:cANSI:qDRAFT
   else
-    "colorscheme badwolf
-    "colorscheme moonshine
     colorscheme happy_hacking
     set guifont=Liberation\ Mono\ 10
   endif
