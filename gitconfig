@@ -1,5 +1,4 @@
 [alias]
-	new = !git init && git symbolic-ref HEAD refs/heads/main
     b = branch
     rest = restore
     sw = switch
@@ -30,4 +29,6 @@
 	sort = version:refname
 [pull]
 	ff = only
+[init]
+    defaultBranch = main
 # vim: filetype=gitconfig
