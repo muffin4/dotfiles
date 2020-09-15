@@ -28,3 +28,4 @@ alias tmuxdotties='tmux new -c ~/dotfiles -s dotties -A'
 
 alias -s mp4=mpv
 alias -s m3u=mpv
+alias -s pdf=evince
