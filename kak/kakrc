@@ -30,3 +30,11 @@ hook global InsertChar \. %{ try %{
     exec -draft hH <a-k><ret>d
     exec <esc>
 }}
+
+# use space as leader
+map -docstring "leader" global normal <space> ,
+map -docstring "remove all sels except main" global normal <backspace> <space>
+map -docstring "remove main sel" global normal <a-backspace> <a-space>
+
+# use , as :
+map -docstring "prompt" global normal , :
