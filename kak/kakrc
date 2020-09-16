@@ -38,3 +38,6 @@ map -docstring "remove main sel" global normal <a-backspace> <a-space>
 
 # use , as :
 map -docstring "prompt" global normal , :
+
+# user mappings
+map -docstring "save buffer" global user w :write<ret>
