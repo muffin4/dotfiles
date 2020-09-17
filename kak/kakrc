@@ -44,3 +44,6 @@ map -docstring "save buffer" global user w :write<ret>
 
 # command aliases
 alias global bd delete-buffer
+
+define-command -docstring "open a new scratch buffer, not linked to a file" scratch %{ edit -scratch }
+alias global s scratch
