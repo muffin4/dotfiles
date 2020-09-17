@@ -41,3 +41,6 @@ map -docstring "prompt" global normal , :
 
 # user mappings
 map -docstring "save buffer" global user w :write<ret>
+
+# command aliases
+alias global bd delete-buffer
