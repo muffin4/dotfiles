@@ -27,7 +27,7 @@ map -docstring "case insensitive backwards search" global normal <a-/> <a-/>(?i)
 
 # ,. to escape instert mode
 hook global InsertChar \. %{ try %{
-    exec -draft hH <a-k><ret>d
+    exec -draft hH <a-k>,\.<ret>d
     exec <esc>
 }}
 
