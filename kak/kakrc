@@ -12,6 +12,17 @@ plug "andreyorst/smarttab.kak" defer smarttab %{
     hook global WinSetOption filetype=* expandtab
 }
 
+# Kakoune Language Server Protocol Client
+plug "ul/kak-lsp" do %{
+    cargo build --release --locked
+    cargo install --force --path .
+} config %{
+    hook global WinSetOption filetype=(rust|python) %{
+        lsp-enable-window
+        lsp-auto-hover-enable
+    }
+}
+
 set-option global startup_info_version 20200901
 add-highlighter global/ number-lines -relative -separator " " -hlcursor -min-digits 3
 
