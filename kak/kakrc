@@ -2,6 +2,16 @@
 source "%val{config}/plugins/plug.kak/rc/plug.kak"
 plug "robertmeta/plug.kak" noload
 
+# configure tabs and indentation
+set-option global indentwidth 4
+set-option global tabstop %opt{indentwidth}
+plug "andreyorst/smarttab.kak" defer smarttab %{
+    set-option global softtabstop %opt{indentwidth}
+} config %{
+    # use spaces instead of tabs by default
+    hook global WinSetOption filetype=* expandtab
+}
+
 set-option global startup_info_version 20200901
 add-highlighter global/ number-lines -relative -separator " " -hlcursor -min-digits 3
 
