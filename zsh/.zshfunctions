@@ -36,7 +36,7 @@ cat () {
 
 sudo () {
     case $1 in
-    kak|vim) shift ; sudoedit "$@" ;;
+    kak|k|vim) shift ; sudoedit "$@" ;;
     *) command sudo "$@" ;;
     esac
 }
