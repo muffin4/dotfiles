@@ -48,10 +48,10 @@ evaluate-commands %sh{
               unlink-window unlinkw bind-key bind list-keys lsk send-keys send send-prefix
               unbind-key unbind set-option set set-window-option show-options show set-hook
               show-hooks set-environment show-environment command-prompt confirm-before confirm
-              display-menu menu choose-buffer clear-history clearhist delete-buffer deleteb
-              list-buffers lsb load-buffer loadb paste-buffer pasteb save-buffer saveb set-buffer
-              setb show-buffer showb clock-mode if-shell if lock-server lock run-shell run
-              wait-for wait"
+              display-menu menu display-message display choose-buffer clear-history clearhist
+              delete-buffer deleteb list-buffers lsb load-buffer loadb paste-buffer pasteb
+              save-buffer saveb set-buffer setb show-buffer showb clock-mode if-shell if
+              lock-server lock run-shell run wait-for wait"
     copy_commands="append-selection append-selection-and-cancel back-to-indentation begin-selection
                    bottom-line cancel clear-selection copy-end-of-line copy-line copy-pipe
                    copy-pipe-no-clear copy-pipe-and-cancel copy-selection copy-selection-no-clear
