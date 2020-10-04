@@ -61,7 +61,7 @@ if &t_Co > 2 || has("gui_running")
   else
     colorscheme angr
     highlight Normal ctermbg=NONE
-    set guifont=Fira\ Code\ 10
+    set guifont=Fira\ Code\ 12
   endif
 endif
 " }}}
