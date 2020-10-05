@@ -21,6 +21,7 @@ plug "ul/kak-lsp" do %{
         lsp-enable-window
         lsp-auto-hover-enable
     }
+    map -docstring "enter lsp mode" global user l ":enter-user-mode lsp<ret>"
 }
 
 set-option global startup_info_version 20200901
