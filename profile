@@ -7,3 +7,4 @@ export TERMINAL=/usr/bin/kitty
 stty -ixon
 
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
