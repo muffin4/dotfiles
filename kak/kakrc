@@ -19,7 +19,6 @@ plug "ul/kak-lsp" do %{
 } config %{
     hook global WinSetOption filetype=(rust|python) %{
         lsp-enable-window
-        lsp-auto-hover-enable
     }
     map -docstring "enter lsp mode" global user l ":enter-user-mode lsp<ret>"
 }
