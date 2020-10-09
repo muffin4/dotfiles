@@ -2,6 +2,10 @@
 source "%val{config}/plugins/plug.kak/rc/plug.kak"
 plug "robertmeta/plug.kak" noload
 
+plug "andreyorst/fzf.kak" config %{
+    map -docstring "enter fzf mode" global user f ": fzf-mode<ret>"
+}
+
 # configure tabs and indentation
 set-option global indentwidth 4
 set-option global tabstop %opt{indentwidth}
@@ -20,7 +24,7 @@ plug "ul/kak-lsp" do %{
     hook global WinSetOption filetype=(rust|python) %{
         lsp-enable-window
     }
-    map -docstring "enter lsp mode" global user l ":enter-user-mode lsp<ret>"
+    map -docstring "enter lsp mode" global user l ": enter-user-mode lsp<ret>"
 }
 
 set-option global startup_info_version 20200901
