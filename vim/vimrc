@@ -111,17 +111,6 @@ nnoremap <bs> :nohlsearch<cr>
 nnoremap <silent><bs> :nohlsearch<cr>
 nnoremap <leader>/ /\<\><left><left>
 " }}}
-" LaTeX {{{
-" TODO: only load if in .tex file
-"set grepprg=grep\ -nH\ $*
-function! LateXEndEnvironmentFunction()
-    normal yyp
-    s/^\\begin\({.*}\).*/\\end\1
-endfunction!
-let g:tex_flavor = "latex"
-" settings for latexsuite
-let g:Tex_DefaultTargetFormat = 'pdf'
-" }}}
 " Folds {{{
 set foldenable          " don't use folds
 set foldlevelstart=10   " open most folds by default
