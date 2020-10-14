@@ -28,9 +28,11 @@ set nojoinspaces
 " file is in utf-8 without byte order mark
 set encoding=utf-8
 
+" use tmux escape sequences and set window title
 set t_ts=]2;
 set t_fs=\\
 set title
+
 " swap , and :
 noremap , :
 noremap q, q:
