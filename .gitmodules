@@ -7,9 +7,6 @@
 [submodule "vim/bundle/surround"]
 	path = vim/pack/isa/start/surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "vim/bundle/nerdtree"]
-	path = vim/pack/isa/start/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
 [submodule "vim/bundle/visual-star-search"]
 	path = vim/pack/isa/start/visual-star-search
 	url = https://github.com/bronson/vim-visual-star-search.git
