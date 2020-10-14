@@ -200,10 +200,6 @@ nnoremap <c-l> <c-w>l
 iabbrev hte the
 iabbrev waht what
 " }}}
-" markdown formatting {{{
-nnoremap <silent><leader>- mzyypVr-`z:+2g/^\(-\\|=\)\+$/d<cr>`z:nohlsearch<cr>
-nnoremap <silent><leader>= mzyypVr=`z:+2g/^\(-\\|=\)\+$/d<cr>`z:nohlsearch<cr>
-" }}}
 " jedi-vim {{{
 let g:jedi#completions_command = ""
 " }}}
