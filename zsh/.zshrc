@@ -1,17 +1,14 @@
-# Lines configured by zsh-newuser-install
 unset HISTFILE
 setopt appendhistory notify prompt_subst
-setopt histignorespace  # remove command lines starting with a space form the history list
+# remove command lines starting with a space form the history list
+setopt histignorespace
 unsetopt beep
 bindkey -v
-# End of lines configured by zsh-newuser-install
-fpath=("$HOME/.zsh/completions" $fpath)
-# The following lines were added by compinstall
-zstyle :compinstall filename "$HOME/.zshrc"
 
+fpath=("$HOME/.zsh/completions" $fpath)
+zstyle :compinstall filename "$HOME/.zshrc"
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
 
 kitty + complete setup zsh | source /dev/stdin
 
