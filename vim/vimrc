@@ -144,7 +144,6 @@ set splitbelow " open a new window below the currently active with :vs
 " Leaders {{{
 let mapleader = "\\"
 map <space> <leader>
-nnoremap <leader>m :Make!<cr>
 nnoremap <leader>w :w<cr>
 " }}}
 " Clipboard {{{
