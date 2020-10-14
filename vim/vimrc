@@ -39,6 +39,8 @@ noremap q, q:
 noremap : ,
 noremap @, @:
 
+" visual line breaks at 'breakat' characters
+set wrap linebreak
 " }}}
 " Mouse {{{
 if has('mouse') " use the mouse if compiled with support for mouse
@@ -190,9 +192,6 @@ nnoremap <leader>vv :vsplit $MYVIMRC<cr>
 set spelllang=de,en_us
 " enabel completion by dictionary when spelling is enabled
 set complete=.,w,b,u,t,i,kspell
-" }}}
-" wrap {{{
-set wrap linebreak
 " }}}
 " session {{{
 set sessionoptions="blank,buffers,curdir,folds,help,localoptions,resize,tabpages,winpos,winsize"
