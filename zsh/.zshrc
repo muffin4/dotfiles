@@ -10,7 +10,7 @@ zstyle :compinstall filename "$HOME/.zshrc"
 autoload -Uz compinit
 compinit
 
-kitty + complete setup zsh | source /dev/stdin
+command -v kitty >/dev/null && kitty + complete setup zsh | source /dev/stdin
 
 prepend-sudo () {
     if [[ "$BUFFER" != "sudo "* ]]
