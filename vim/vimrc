@@ -74,7 +74,6 @@ endif
 " }}}
 " Tabs & Indents {{{
 " always use 4 spaces
-set tabstop=4       " number of spaces each \t is displayed as
 set softtabstop=4   " number of spaces in tab when editing
 set shiftwidth=4    " number of spaces to use for each step of autoindents
 set shiftround      " Round indent to multiple of 'shiftwidth'.
