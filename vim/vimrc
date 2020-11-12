@@ -5,6 +5,7 @@ if v:progname =~? "evim"
 endif " }}}
 " Misc {{{
 behave xterm
+filetype plugin indent on
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
