@@ -80,8 +80,6 @@ set shiftround      " Round indent to multiple of 'shiftwidth'.
 set expandtab       " insert spaces instead of \t
 set nosmartindent
 set autoindent      " always set autoindenting on
-" don't remove indent in front of #
-inoremap # X#
 " }}}
 " UI Layout {{{
 set number          " displays line-numbering at the start of every line
