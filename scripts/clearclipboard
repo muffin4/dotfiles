@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
-set -e
 xclip -i /dev/null
 xclip -i /dev/null -selection clipboard
-killall xclip
+sleep 1 && killall xclip
