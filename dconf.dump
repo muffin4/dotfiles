@@ -42,7 +42,7 @@ night-light-enabled=true
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/']
 screensaver=['<Alt>Tab']
 volume-down=['<Shift><Super>underscore']
 volume-mute=['<Shift><Super>m']
@@ -64,6 +64,11 @@ command='/home/isabelle/.scripts/passmenu.py --line-number=2  --matching=fuzzy'
 name='Passmenu for username'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3]
-binding='<Super>Return'
+binding=''
 command='/usr/bin/kitty'
 name='Kitty'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4]
+binding='<Super>Return'
+command='rofi -show window'
+name='Rofi window selection'
