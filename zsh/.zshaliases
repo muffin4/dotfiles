@@ -18,7 +18,7 @@ alias no='yes n'
 alias cal='cal --monday'
 alias -g grep='grep --color=auto --binary-files=without-match'
 alias diff="diff --color=auto"
-alias bc="bc --mathlib"
+alias bc="bc --mathlib --quiet"
 alias hibernate="systemctl hibernate"
 alias v=vim
 alias k=kak
