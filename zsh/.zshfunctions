@@ -35,3 +35,11 @@ sudo () {
     *) command sudo "$@" ;;
     esac
 }
+
+mpv () {
+    if [[ -v MPV_WATCH_LATER_DIR ]] ; then
+        command mpv "--watch-later-directory=$MPV_WATCH_LATER_DIR" "$@"
+    else
+        command mpv "$@"
+    fi
+}
