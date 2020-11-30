@@ -37,6 +37,7 @@ autoload -Uz vcs_info
 autoload edit-command-line
 zle -N edit-command-line
 bindkey -M viins "^F" edit-command-line
+bindkey -M vicmd "^F" edit-command-line
 
 zstyle ':vcs_info:*' actionformats \
     '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
