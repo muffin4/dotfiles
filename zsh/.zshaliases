@@ -24,6 +24,7 @@ alias v=vim
 alias k=kak
 
 alias tmuxdotties='tmux new -c ~/dotfiles -s dotties -A'
+alias sed4='sed -e "1s/..../& /g"'
 
 alias -s mp4=mpv
 alias -s m3u=mpv
