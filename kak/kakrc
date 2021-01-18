@@ -6,14 +6,35 @@ plug "andreyorst/fzf.kak" config %{
     map -docstring "enter fzf mode" global user f ": fzf-mode<ret>"
 }
 
-# configure tabs and indentation
-set-option global indentwidth 4
-set-option global tabstop %opt{indentwidth}
+# Per-Buffer indendation fallbacks/defaults
+hook global BufCreate .*[.](c|cpp|gas) %{
+    set-option buffer indentwidth 0
+    set-option buffer tabstop 8
+}
+hook global BufCreate .*[.](tex|mkiv|mkii) %{
+    set-option buffer indentwidth 2
+    set-option buffer tabstop 4
+}
+hook global BufCreate (.*[.](.mk))|(Makefile) %{
+  set-option buffer indentwidth 8
+}
+
+# Configure tab and backspace key behavior based on previous settings
 plug "andreyorst/smarttab.kak" defer smarttab %{
-    set-option global softtabstop %opt{indentwidth}
+    # set-option global softtabstop 4
 } config %{
-    # use spaces instead of tabs by default
-    hook global WinSetOption filetype=* expandtab
+    hook global WinSetOption filetype=(.*) %{
+        evaluate-commands %sh{
+            if [ $kak_opt_indentwidth -ne 0 ]; then
+                echo "expandtab"
+                echo "set-option buffer softtabstop $kak_opt_indentwidth"
+            elif [ $kak_opt_filetype = "gas" ] || [ $kak_opt_filetype = "nasm" ]; then
+                echo "noexpandtab"
+            else
+                echo "smarttab"
+            fi
+        }
+    }
 }
 
 # Kakoune Language Server Protocol Client
