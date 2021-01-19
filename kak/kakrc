@@ -63,7 +63,7 @@ define-command copy-to-clipboard %{ nop %sh{
     [ -n "$TMUX" ] && tmux set-buffer -- "$kak_selection"
     [ -n "$DISPLAY" ] && printf %s "$kak_selection" | xclip -in -selection clipboard >&- 2>&-
 }}
-map -docstring "copy to tmux buffer and X11 clipboard" global user y :copy-to-clipboard<ret>
+map -docstring "copy primary selection to tmux buffer and X11 clipboard" global user y :copy-to-clipboard<ret>
 
 # paste from X11 clipboard
 map -docstring "paste before" global user P "!xclip -out -selection clipboard<ret>"
