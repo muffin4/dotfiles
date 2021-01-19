@@ -42,7 +42,7 @@ plug "ul/kak-lsp" do %{
     cargo build --release --locked
     cargo install --force --path .
 } config %{
-    hook global WinSetOption filetype=(rust|python) %{
+    hook global WinSetOption filetype=(rust|python|c) %{
         lsp-enable-window
     }
     map -docstring "enter lsp mode" global user l ": enter-user-mode lsp<ret>"
