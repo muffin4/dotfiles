@@ -47,6 +47,7 @@ plug "ul/kak-lsp" do %{
     cargo build --release --locked
     cargo install --force --path .
 } config %{
+    set-option global snippet_support = false
     hook global WinSetOption filetype=(rust|python|c) %{
         lsp-enable-window
     }
