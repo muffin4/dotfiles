@@ -57,7 +57,7 @@ plug "ul/kak-lsp" do %{
 }
 
 set-option global startup_info_version 20200901
-add-highlighter global/ number-lines -relative -separator " " -hlcursor -min-digits 3
+add-highlighter global/ number-lines -separator " " -hlcursor -min-digits 3
 add-highlighter global/ wrap -word
 
 # turn this into a hook
