@@ -5,6 +5,8 @@ unset HISTFILE
 setopt appendhistory notify prompt_subst
 setopt histignorespace
 
+setopt shwordsplit
+
 fpath=("$HOME/.zsh/completions" $fpath)
 zstyle :compinstall filename "$HOME/.zshrc"
 autoload -Uz compinit
