@@ -8,3 +8,5 @@ stty -ixon
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+
+[ -d "$XDG_RUNTIME_DIR" ] && export TMPDIR="$XDG_RUNTIME_DIR"
