@@ -1,9 +1,9 @@
+bindkey -v
+unsetopt beep
+
 unset HISTFILE
 setopt appendhistory notify prompt_subst
-# remove command lines starting with a space form the history list
 setopt histignorespace
-unsetopt beep
-bindkey -v
 
 fpath=("$HOME/.zsh/completions" $fpath)
 zstyle :compinstall filename "$HOME/.zshrc"
