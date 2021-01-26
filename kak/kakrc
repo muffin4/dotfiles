@@ -115,13 +115,13 @@ alias global s scratch
 
 define-command ide %{
     rename-client main
-    set global jumpclient main
+    set-option global jumpclient main
 
     new rename-client docs
-    set global docsclient docs
+    set-option global docsclient docs
 
     new rename-client tools
-    set global toolsclient tools
+    set-option global toolsclient tools
 }
 
 evaluate-commands %sh{
