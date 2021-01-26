@@ -124,3 +124,9 @@ define-command ide %{
     new rename-client tools
     set global toolsclient tools
 }
+
+evaluate-commands %sh{
+    [ -n "$TMUX" ] && printf "%s\n" \
+        "require-module tmux" \
+        "alias global terminal tmux-terminal-vertical"
+}
