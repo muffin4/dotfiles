@@ -86,3 +86,9 @@ evaluate-commands %sh{
         "require-module tmux" \
         "alias global terminal tmux-terminal-vertical"
 }
+
+evaluate-commands %sh{
+    if [ -n "$(command -v rg)" ]; then
+        echo "set-option global grepcmd 'rg --follow --hidden --with-filename --column'"
+    fi
+}
