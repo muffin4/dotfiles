@@ -7,7 +7,6 @@ alias cp='cp --interactive'
 alias tuxsay='cowsay -f tux'
 alias sl='ls'
 alias ..='cd ..'
-alias ../..='cd ../..'
 alias 'steamlib=find ~/.steam/root/ \( -name "libgpg-error.so*" -o -name "libstdc++.so*" \) -print -delete'
 alias 'py=python'
 alias ra=ranger
@@ -16,7 +15,7 @@ alias whodis=whoami
 alias g=git
 alias no='yes n'
 alias cal='cal --monday'
-alias -g grep='grep --color=auto --binary-files=without-match'
+alias grep='grep --color=auto --binary-files=without-match'
 alias rg='rg --hidden --follow'
 alias diff="diff --color=auto"
 alias bc="bc --mathlib --quiet"
@@ -27,6 +26,8 @@ alias k=kak
 alias tmuxdotties='tmux new -c ~/dotfiles -s dotties -A'
 alias sed4='sed -e "1s/..../& /g"'
 
-alias -s mp4=mpv
-alias -s m3u=mpv
-alias -s pdf=evince
+if [ zsh = "$(basename $SHELL)" ]; then
+    alias -s mp4=mpv
+    alias -s m3u=mpv
+    alias -s pdf=evince
+fi
