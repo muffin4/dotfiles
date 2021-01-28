@@ -14,7 +14,7 @@ shtart () {
     nohup "$@" 0<&- 1>&- 2>&- &!
 }
 
-if [ zsh = "$(basename "$SHELL")" ]; then
+if [ "$ZSH_VERSION" ]; then
     compdef _shtart shtart
     _shtart () {
         local -a args
