@@ -24,10 +24,6 @@ _shtart () {
     _arguments -s -S $args
 }
 
-cat () {
-    if [ -t 1 ] && command -v lolcat >&- ; then lolcat "$@" ; else command cat "$@" ; fi
-}
-
 sudo () {
     case $1 in
     kak|k) shift ; SUDO_EDITOR=kak sudoedit "$@" ;;
