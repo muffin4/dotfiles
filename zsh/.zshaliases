@@ -17,6 +17,7 @@ alias g=git
 alias no='yes n'
 alias cal='cal --monday'
 alias -g grep='grep --color=auto --binary-files=without-match'
+alias rg='rg --hidden --follow'
 alias diff="diff --color=auto"
 alias bc="bc --mathlib --quiet"
 alias hibernate="systemctl hibernate"
