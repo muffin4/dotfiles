@@ -24,6 +24,7 @@
     ~/.config/user-dirs.dirs:
         force: true
     ~/.scripts:
+    ~/.bash_profile:
     ~/.bashrc:
     ~/.ssh:
     ~/.vim:
