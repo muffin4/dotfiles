@@ -52,6 +52,8 @@ programs=(
     bc # a basic calculator for the terminal
     earlyoom # Early OOM Daemon for Linux
     lolcat # queer culture
+    ripgrep # pattern search
+    fd # file search
 )
 aur_progs=(
 )
