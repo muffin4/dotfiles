@@ -15,6 +15,8 @@ if [ "$PS1" ]; then
         fi
     }
     if [ -f "$XDG_CONFIG_HOME/git-prompt.sh" ]; then
+        GIT_PS1_SHOWDIRTYSTATE=on
+        GIT_PS1_SHOWSTASHSTATE=on
         . "$XDG_CONFIG_HOME/git-prompt.sh"
         echo "found git-prompt.sh"
     else
