@@ -28,3 +28,7 @@ if [ "$PS1" ]; then
         PS1="🔹$PS1"
     fi
 fi
+
+if [ -f ~/.bashrc.local ]; then
+    . ~/.bashrc.local
+fi
