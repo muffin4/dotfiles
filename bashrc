@@ -23,7 +23,7 @@ if [ "$PS1" ]; then
             true
         }
     fi
-    PS1='\[\e[0;91m\]$(check_exit_status)\[\e[0;92m\]\u@\h: \[\e[0;93m\]\w\[\e[0;32m\]$(__git_ps1)\n\[\e[0;95m\]%\[\033[m\] '
+    PS1='\[\e[1;31m\]$(check_exit_status)\[\e[0;92m\]\u@\h: \[\e[0;93m\]\w\[\e[0;32m\]$(__git_ps1)\n\[\e[0;95m\]%\[\033[m\] '
     if [ "$(hostname)" = toolbox ]; then
         PS1="🔹$PS1"
     fi
