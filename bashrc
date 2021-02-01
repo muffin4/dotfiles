@@ -4,7 +4,7 @@ unset HISTFILE
 
 # are we an interactive shell?
 if [ "$PS1" ]; then
-    for file in ~/.zsh/.zshaliases; do
+    for file in ~/.zsh/.zshaliases ~/.zsh/.zshfunctions; do
         [ -f "$file" ] && . "$file"
     done
 
