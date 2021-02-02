@@ -33,6 +33,6 @@ if [ "$PS1" ]; then
     fi
 fi
 
-if [ -f ~/.bashrc.local ]; then
-    . ~/.bashrc.local
+if [ -f ~/.config/bash/bashrc.local ]; then
+    . ~/.config/bash/bashrc.local
 fi
