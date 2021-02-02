@@ -2,6 +2,10 @@
 
 unset HISTFILE
 
+if [ -n "$VIRTUAL_ENV" ]; then
+    . "$VIRTUAL_ENV/bin/activate"
+fi
+
 # are we an interactive shell?
 if [ "$PS1" ]; then
     for file in ~/.zsh/.zshaliases ~/.zsh/.zshfunctions; do
