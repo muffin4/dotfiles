@@ -9,7 +9,7 @@ programs=(
     firefox # emergency web browser
     git
     kitty # terminal emulator
-    zsh # shell
+    bash # shell
     bash-completion
     xorg-server
     ttf-dejavu # font fixes

@@ -13,6 +13,7 @@
 
 - link:
     ~/.gtkrc-2.0: gtk/gtk-2.0/gtkrc-2.0
+    ~/.config/bash:
     ~/.config/git-prompt.sh:
     ~/.config/gtk-3.0: gtk/gtk-3.0
     ~/.config/kak:
@@ -39,11 +40,9 @@
     ~/.xinitrc:
     ~/.xprofile:
     ~/.xset:
-    ~/.zshenv:
     ~/.gitconfig:
     ~/.gnupg:
     ~/.abcde.conf:
-    ~/.zsh:
 
 - shell:
     - [mkdir -p ~/.tmp/, Creating ~/.tmp/ directory]

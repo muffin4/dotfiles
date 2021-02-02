@@ -25,9 +25,3 @@ alias k=kak
 
 alias tmuxdotties='tmux new -c ~/dotfiles -s dotties -A'
 alias sed4='sed -e "1s/..../& /g"'
-
-if [ "$ZSH_VERSION" ]; then
-    alias -s mp4=mpv
-    alias -s m3u=mpv
-    alias -s pdf=evince
-fi

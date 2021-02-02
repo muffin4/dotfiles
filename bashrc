@@ -1,4 +1,4 @@
-[ -f ~/.zshenv ] && . ~/.zshenv
+[ -f ~/.config/bash/env.sh ] && . ~/.config/bash/env.sh
 
 unset HISTFILE
 
@@ -8,7 +8,7 @@ fi
 
 # are we an interactive shell?
 if [ "$PS1" ]; then
-    for file in ~/.zsh/.zshaliases ~/.zsh/.zshfunctions; do
+    for file in ~/.config/bash/aliases.sh ~/.config/bash/functions.sh; do
         [ -f "$file" ] && . "$file"
     done
 
