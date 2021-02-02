@@ -10,6 +10,7 @@ programs=(
     git
     kitty # terminal emulator
     zsh # shell
+    bash-completion
     xorg-server
     ttf-dejavu # font fixes
     noto-fonts-emoji # emoji fonts
