@@ -2,10 +2,6 @@
 
 unset HISTFILE
 
-if [ -n "$VIRTUAL_ENV" ]; then
-    . "$VIRTUAL_ENV/bin/activate"
-fi
-
 # are we an interactive shell?
 if [ "$PS1" ]; then
     for file in ~/.config/bash/aliases.sh ~/.config/bash/functions.sh; do
@@ -35,4 +31,8 @@ fi
 
 if [ -f ~/.config/bash/bashrc.local ]; then
     . ~/.config/bash/bashrc.local
+fi
+
+if [ -v VIRTUAL_ENV ]; then
+    . "$VIRTUAL_ENV/bin/activate"
 fi
