@@ -16,17 +16,17 @@ if [ "$PS1" ]; then
     PS1=$(
         RED_B='\[\e[1;31m\]'
         GREEN='\[\e[0;32m\]'
-        LIGHT_GREEN='\[\e[0;92m\]'
-        LIGHT_YELLOW='\[\e[0;93m\]'
-        LIGHT_PURPLE='\[\e[0;95m\]'
+        GREEN_L='\[\e[0;92m\]'
+        YELLOW_L='\[\e[0;93m\]'
+        PURPLE_L='\[\e[0;95m\]'
         DEFAULT='\[\033[m\]'
         printf "%s" \
             "${RED_B}\$(x=\$?; [ \$x -ne 0 ] && echo -n \"\$x \")" \
-            "${LIGHT_GREEN}\u@\h: " \
-            "${LIGHT_YELLOW}\w" \
+            "${GREEN_L}\u@\h: " \
+            "${YELLOW_L}\w" \
             "${GREEN}\$(declare -F __git_ps1 &>/dev/null && __git_ps1)" \
             "\n" \
-            "${LIGHT_PURPLE}%${DEFAULT} "
+            "${PURPLE_L}%${DEFAULT} "
     )
 
     if [ "$(uname -n)" = toolbox ]; then
