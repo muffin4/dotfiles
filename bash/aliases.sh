@@ -1,4 +1,4 @@
-alias ls='ls --color=auto --group-directories-first'
+alias ls='LC_ALL=C ls --color=auto --group-directories-first'
 alias l='ls -lh'
 alias la='ls -lhA'
 alias date_clean='date +%F_%H-%M-%S'
