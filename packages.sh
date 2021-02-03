@@ -55,6 +55,7 @@ programs=(
     lolcat # queer culture
     ripgrep # pattern search
     fd # file search
+    fzf # fuzzy finder (used by fzf.kak)
 )
 aur_progs=(
 )
