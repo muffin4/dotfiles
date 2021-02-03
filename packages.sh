@@ -48,7 +48,6 @@ programs=(
     pulseaudio-alsa # alsa configuration for pulseaudio
     pavucontrol # graphical control panel for pulseaudio
     tmux # terminal multiplexer
-    ntp # network time protocol for setting time
     inetutils # includes `hostname` required for rsync-backup
     bc # a basic calculator for the terminal
     earlyoom # Early OOM Daemon for Linux

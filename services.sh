@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 services=(
-    ntpd.service
+    systemd-timesyncd.service
     earlyoom.service
 )
 
