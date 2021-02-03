@@ -23,7 +23,19 @@ if [ "$PS1" ]; then
             true
         }
     fi
-    PS1='\[\e[1;31m\]$(check_exit_status)\[\e[0;92m\]\u@\h: \[\e[0;93m\]\w\[\e[0;32m\]$(__git_ps1)\n\[\e[0;95m\]%\[\033[m\] '
+    PS1=$(
+        RED_B='\[\e[1;31m\]'
+        GREEN='\[\e[0;32m\]'
+        LIGHT_GREEN='\[\e[0;92m\]'
+        LIGHT_YELLOW='\[\e[0;93m\]'
+        LIGHT_PURPLE='\[\e[0;95m\]'
+        DEFAULT='\[\033[m\]'
+        printf "%s" \
+            "${RED_B}\$(check_exit_status)${LIGHT_GREEN}\u@\h: " \
+            "${LIGHT_YELLOW}\w${GREEN}\$(__git_ps1)\n" \
+            "${LIGHT_PURPLE}%${DEFAULT} "
+    )
+
     if [ "$(uname -n)" = toolbox ]; then
         PS1="🔹$PS1"
     fi
