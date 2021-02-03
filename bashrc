@@ -8,20 +8,10 @@ if [ "$PS1" ]; then
         [ -f "$file" ] && . "$file"
     done
 
-    check_exit_status() {
-        local es=$?
-        if [ 0 -ne "$es" ]; then
-            printf "%s " "$es"
-        fi
-    }
     if [ -f "$XDG_CONFIG_HOME/git-prompt.sh" ]; then
         GIT_PS1_SHOWDIRTYSTATE=on
         GIT_PS1_SHOWSTASHSTATE=on
         . "$XDG_CONFIG_HOME/git-prompt.sh"
-    else
-        __git_ps1() {
-            true
-        }
     fi
     PS1=$(
         RED_B='\[\e[1;31m\]'
@@ -31,8 +21,11 @@ if [ "$PS1" ]; then
         LIGHT_PURPLE='\[\e[0;95m\]'
         DEFAULT='\[\033[m\]'
         printf "%s" \
-            "${RED_B}\$(check_exit_status)${LIGHT_GREEN}\u@\h: " \
-            "${LIGHT_YELLOW}\w${GREEN}\$(__git_ps1)\n" \
+            "${RED_B}\$(x=\$?; [ \$x -ne 0 ] && echo -n \"\$x \")" \
+            "${LIGHT_GREEN}\u@\h: " \
+            "${LIGHT_YELLOW}\w" \
+            "${GREEN}\$(declare -F __git_ps1 &>/dev/null && __git_ps1)" \
+            "\n" \
             "${LIGHT_PURPLE}%${DEFAULT} "
     )
 
