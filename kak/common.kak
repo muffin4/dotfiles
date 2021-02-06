@@ -20,6 +20,9 @@ hook global BufSetOption filetype=python %{
 hook global BufSetOption filetype=git-commit %{
     set-option buffer autowrap_column 73
 }
+hook global BufSetOption filetype=yaml %{
+    set-option buffer indentwidth 2
+}
 
 # highlighters
 add-highlighter global/ number-lines -separator " " -hlcursor -min-digits 3
