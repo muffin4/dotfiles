@@ -15,7 +15,7 @@
     rb = rebase
     l = log --graph --oneline
 [core]
-	pager = less --tabs=4 --RAW-CONTROL-CHARS --quit-if-one-screen
+    pager = less --tabs=4 --RAW-CONTROL-CHARS --quit-if-one-screen
 [pager]
     status = true
 [log]
@@ -24,11 +24,11 @@
 [branch]
     sort = -authordate
 [advice]
-	detachedHead = false
+    detachedHead = false
 [tag]
-	sort = version:refname
+    sort = version:refname
 [pull]
-	ff = only
+    ff = only
 [init]
     defaultBranch = main
 # vim: filetype=gitconfig
