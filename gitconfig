@@ -31,4 +31,7 @@
     ff = only
 [init]
     defaultBranch = main
+[user]
+    name = Isa Cichon
+    email = isa.ci@posteo.de
 # vim: filetype=gitconfig
