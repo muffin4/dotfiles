@@ -50,4 +50,3 @@
     - [git submodule update --init --recursive, Installing submodules]
     - [lesskey, Loading lesskey configuration]
     - [xdg-mime default org.gnome.Evince.desktop application/pdf, Making evince the default application for pdf files]
-    - [dconf load / < dconf.dump, Loading dconf settings]
