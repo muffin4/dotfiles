@@ -17,6 +17,7 @@ hook global BufSetOption filetype=makefile %{
 hook global BufSetOption filetype=python %{
     set-option buffer indentwidth 4
     set-option buffer tabstop 4
+    set-option buffer autowrap_column 120
 }
 hook global BufSetOption filetype=git-commit %{
     set-option buffer autowrap_column 73
