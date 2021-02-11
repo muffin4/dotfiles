@@ -22,3 +22,12 @@ alias k=kak
 
 alias tmuxdotties='tmux new -c ~/dotfiles -s dotties -A'
 alias sed4='sed -e "1s/..../& /g"'
+
+while read line; do
+    if [[ $line =~ ^alias\ ([^=]+)= ]]; then
+        _alias=${BASH_REMATCH[1]}
+        [[ $(type -a -t "$_alias") == alias ]] && \
+            complete -F _complete_alias "$_alias"
+        unset _alias
+    fi
+done <<< "$(alias -p)"
