@@ -1,4 +1,5 @@
 set-option global startup_info_version 20200901
+set-option -add global ui_options ncurses_assistant=cat
 
 # Per-Buffer indendation fallbacks/defaults
 hook global BufSetOption filetype=c|cpp %{
