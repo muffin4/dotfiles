@@ -7,13 +7,10 @@ alias cp='cp --interactive'
 alias tuxsay='cowsay -f tux'
 alias sl='ls'
 alias ..='cd ..'
-alias 'steamlib=find ~/.steam/root/ \( -name "libgpg-error.so*" -o -name "libstdc++.so*" \) -print -delete'
-alias 'py=python'
-alias ra=ranger
+alias steamlib='find ~/.steam/root/ \( -name "libgpg-error.so*" -o -name "libstdc++.so*" \) -print -delete'
+alias py='python'
 alias pamcan=pacman
-alias whodis=whoami
 alias g=git
-alias no='yes n'
 alias cal='cal --monday'
 alias grep='grep --color=auto --binary-files=without-match'
 alias rg='rg --hidden --follow'
