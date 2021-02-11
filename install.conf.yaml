@@ -26,6 +26,7 @@
     ~/.config/user-dirs.dirs:
         force: true
     ~/.scripts:
+    ~/.bash_completion:
     ~/.bash_profile:
     ~/.bashrc:
     ~/.ssh:
