@@ -18,7 +18,6 @@ programs=(
     ttf-fira-code # monospace font
     gnome
     gnome-tweaks
-    gnome-software-packagekit-plugin # allows "gnome software" to work on arch
     dconf-editor
     gdm
     arc-gtk-theme
