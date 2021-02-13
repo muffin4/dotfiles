@@ -26,6 +26,11 @@ hook global BufSetOption filetype=yaml %{
     set-option buffer indentwidth 2
 }
 
+# filetype recognition
+hook global BufCreate (.*/)?bashrc %{
+    set-option buffer filetype sh
+}
+
 # highlighters
 add-highlighter global/ number-lines -separator " " -hlcursor -min-digits 3
 add-highlighter global/ wrap -word
