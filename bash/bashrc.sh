@@ -15,8 +15,8 @@ if [ "$PS1" ]; then
     unset config_files
 fi
 
-if [ -f ~/.config/bash/bashrc.local ]; then
-    . ~/.config/bash/bashrc.local
+if [ -f ~/.config/bash/bashrc.local.sh ]; then
+    . ~/.config/bash/bashrc.local.sh
 fi
 
 if [ "$VIRTUAL_ENV" ]; then

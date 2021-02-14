@@ -26,9 +26,9 @@
     ~/.config/user-dirs.dirs:
         force: true
     ~/.scripts:
-    ~/.bash_completion:
-    ~/.bash_profile:
-    ~/.bashrc:
+    ~/.bash_completion: bash/completion.sh
+    ~/.bash_profile: bash/profile.sh
+    ~/.bashrc: bash/bashrc.sh
     ~/.ssh:
     ~/.vim:
     ~/.icons:
