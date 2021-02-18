@@ -25,6 +25,9 @@ hook global BufSetOption filetype=git-commit %{
 hook global BufSetOption filetype=yaml %{
     set-option buffer indentwidth 2
 }
+hook global BufSetOption filetype=rust %{
+    set-option buffer formatcmd rustfmt
+}
 
 # highlighters
 add-highlighter global/ number-lines -separator " " -hlcursor -min-digits 3
