@@ -53,10 +53,6 @@ map -docstring "paste before" global user P "!xclip -out -selection clipboard<re
 map -docstring "paste after" global user p "<a-!>xclip -out -selection clipboard<ret>"
 map -docstring "replace selections" global user R "|xclip -out -selection clipboard<ret>"
 
-# case insensitive search
-map -docstring "case insensitive search" global normal / /(?i)
-map -docstring "case insensitive backwards search" global normal <a-/> <a-/>(?i)
-
 # ,. to escape instert mode
 hook global InsertChar \. %{ try %{
     exec -draft hH <a-k>,\.<ret>d
