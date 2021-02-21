@@ -1,13 +1,8 @@
-# vim : filetype=zsh
 sleepuntil () {
     if [[ "$#" != 1 ]] ; then echo "Usage: sleepuntil timestamp" ; return 1 ; fi
     local then="$(date -d "$1" +%s)"
     local now="$(date +%s)"
     sleep "$(( $then - $now ))"
-}
-
-xargsvim () {
-    xargs "$@" "$SHELL" -c '</dev/tty vim "$@"' ignoreme
 }
 
 shtart () {
@@ -29,7 +24,6 @@ fi
 sudo () {
     case $1 in
     kak|k) shift ; SUDO_EDITOR=kak sudoedit "$@" ;;
-    vim|v) shift ; SUDO_EDITOR=vim sudoedit "$@" ;;
     *) command sudo "$@" ;;
     esac
 }

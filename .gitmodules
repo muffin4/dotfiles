@@ -1,36 +1,12 @@
-[submodule "vim/bundle/fugitive"]
-	path = vim/pack/isa/start/fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule "vim/bundle/ctrlp"]
-	path = vim/pack/isa/start/ctrlp
-	url = https://github.com/ctrlpvim/ctrlp.vim.git
-[submodule "vim/bundle/surround"]
-	path = vim/pack/isa/start/surround
-	url = https://github.com/tpope/vim-surround.git
-[submodule "vim/bundle/visual-star-search"]
-	path = vim/pack/isa/start/visual-star-search
-	url = https://github.com/bronson/vim-visual-star-search.git
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
-[submodule "vim/pack/isa/start/repeat"]
-	path = vim/pack/isa/start/repeat
-	url = https://tpope.io/vim/repeat.git
-[submodule "vim/pack/isa/start/dispatch"]
-	path = vim/pack/isa/start/dispatch
-	url = https://tpope.io/vim/dispatch.git
 [submodule "kak/plugins/plug.kak"]
 	path = kak/plugins/plug.kak
 	url = https://github.com/robertmeta/plug.kak.git
 [submodule "kitty/kitty-themes"]
 	path = kitty/kitty-themes
 	url = https://github.com/dexpota/kitty-themes.git
-[submodule "vim/pack/isa/start/angr.vim"]
-	path = vim/pack/isa/start/angr.vim
-	url = git@gitlab.com:isa4/angr.vim.git
-[submodule "vim/pack/isa/start/ale"]
-	path = vim/pack/isa/start/ale
-	url = https://github.com/dense-analysis/ale.git
 [submodule "bash/complete-alias"]
 	path = bash/complete-alias
 	url = https://github.com/cykerway/complete-alias.git
