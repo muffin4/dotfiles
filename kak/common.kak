@@ -108,3 +108,14 @@ evaluate-commands %sh{
         echo "set-option global grepcmd 'rg --follow --hidden --with-filename --column'"
     fi
 }
+
+# Highlight the word under the cursor
+set-face global CurWord default,rgba:30303040
+hook global NormalIdle .* %{
+    eval -draft %{ try %{
+        exec <space><a-i>w <a-k>\A\w+\z<ret>
+        add-highlighter -override global/curword regex "\b\Q%val{selection}\E\b" 0:CurWord
+    } catch %{
+        add-highlighter -override global/curword group
+    } }
+}
