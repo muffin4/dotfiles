@@ -71,6 +71,9 @@ map global normal '#' ": comment-line<ret>"
 map -docstring "run makecmd" global user m ": make<ret>"
 map -docstring "save buffer" global user w ": write<ret>"
 
+hook global -always BufOpenFifo '\*grep\*' %{ map -- global normal - ': grep-next-match<ret>' }
+hook global -always BufOpenFifo '\*make\*' %{ map -- global normal - ': make-next-error<ret>' }
+
 # only show autocomplete options when prompting for them
 set-option global autocomplete prompt
 
