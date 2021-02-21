@@ -74,6 +74,10 @@ map global normal '#' ": comment-line<ret>"
 map -docstring "run makecmd" global user m ": make<ret>"
 map -docstring "save buffer" global user w ": write<ret>"
 
+# insert result of math
+map global normal = \
+    ':prompt math: %{exec "!printf ""%%s"" ""$(echo ""%val{text}"" | bc)""<lt>ret<gt>"}<ret>'
+
 hook global -always BufOpenFifo '\*grep\*' %{ map -- global normal - ': grep-next-match<ret>' }
 hook global -always BufOpenFifo '\*make\*' %{ map -- global normal - ': make-next-error<ret>' }
 
