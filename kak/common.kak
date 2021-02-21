@@ -33,6 +33,7 @@ hook global BufSetOption filetype=rust %{
 }
 
 # highlighters
+add-highlighter global/ show-matching
 add-highlighter global/ number-lines -separator " " -hlcursor -min-digits 3
 add-highlighter global/ wrap -word
 
