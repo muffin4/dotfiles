@@ -29,7 +29,7 @@ hook global BufSetOption filetype=rust %{
     set-option buffer formatcmd rustfmt
     set-option buffer autowrap_column 100
     set-option buffer makecmd "cargo"
-    map -docstring "cargo run" buffer user m ":make run<ret>"
+    map -docstring "cargo run" buffer user m ": make run<ret>"
 }
 
 # highlighters
@@ -52,7 +52,7 @@ define-command copy-to-clipboard %{ nop %sh{
     [ -n "$TMUX" ] && tmux set-buffer -- "$kak_selection"
     [ -n "$DISPLAY" ] && printf %s "$kak_selection" | xclip -in -selection clipboard >&- 2>&-
 }}
-map -docstring "copy primary selection to tmux buffer and X11 clipboard" global user y :copy-to-clipboard<ret>
+map -docstring "copy primary selection to tmux buffer and X11 clipboard" global user y ": copy-to-clipboard<ret>"
 
 # paste from X11 clipboard
 map -docstring "paste before" global user P "!xclip -out -selection clipboard<ret>"
@@ -66,8 +66,8 @@ hook global InsertChar \. %{ try %{
 }}
 
 # user mappings
-map -docstring "run makecmd" global user m :make<ret>
-map -docstring "save buffer" global user w :write<ret>
+map -docstring "run makecmd" global user m ": make<ret>"
+map -docstring "save buffer" global user w ": write<ret>"
 
 # only show autocomplete options when prompting for them
 set-option global autocomplete prompt
