@@ -90,7 +90,9 @@ alias global bd delete-buffer
 define-command -docstring "open a new scratch buffer, not linked to a file" scratch %{ edit -scratch }
 alias global s scratch
 
-define-command ide %{
+define-command ide -params 0..1 %{
+    try %{ rename-session %arg{1} }
+
     rename-client main
     set-option global jumpclient main
 
