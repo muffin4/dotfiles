@@ -28,7 +28,8 @@ hook global BufSetOption filetype=yaml %{
 hook global BufSetOption filetype=rust %{
     set-option buffer formatcmd rustfmt
     set-option buffer autowrap_column 100
-    set-option buffer makecmd "cargo run"
+    set-option buffer makecmd "cargo"
+    map -docstring "cargo run" buffer user m ":make run<ret>"
 }
 
 # highlighters
