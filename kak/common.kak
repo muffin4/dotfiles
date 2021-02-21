@@ -65,6 +65,7 @@ hook global InsertChar \. %{ try %{
 }}
 
 # user mappings
+map -docstring "run makecmd" global user m :make<ret>
 map -docstring "save buffer" global user w :write<ret>
 
 # only show autocomplete options when prompting for them
