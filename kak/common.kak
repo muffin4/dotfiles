@@ -37,6 +37,9 @@ add-highlighter global/ show-matching
 add-highlighter global/ number-lines -separator " " -hlcursor -min-digits 3
 add-highlighter global/ wrap -word
 
+set-face global Whitespace rgb:404040
+add-highlighter global/ show-whitespaces
+
 hook global BufSetOption autowrap_column=.* %{
     add-highlighter -override buffer/autowrap_column column %opt{autowrap_column} default,red
 }
