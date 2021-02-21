@@ -67,6 +67,7 @@ hook global InsertChar \. %{ try %{
 }}
 
 # user mappings
+map global normal '#' ": comment-line<ret>"
 map -docstring "run makecmd" global user m ": make<ret>"
 map -docstring "save buffer" global user w ": write<ret>"
 
