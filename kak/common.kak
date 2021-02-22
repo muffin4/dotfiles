@@ -84,9 +84,6 @@ hook global -always BufOpenFifo '\*make\*' %{ map -- global normal - ': make-nex
 # only show autocomplete options when prompting for them
 set-option global autocomplete prompt
 
-# command aliases
-alias global bd delete-buffer
-
 define-command -docstring "open a new scratch buffer, not linked to a file" scratch %{ edit -scratch }
 alias global s scratch
 
