@@ -109,11 +109,11 @@ define-command ide -params 0..1 %{
 
     nop %sh{
         if [ -n "$TMUX" ]; then
-            tmux select-layout tiled
-            tmux select-pane -t "$TMUX_PANE" &&
-            tmux resize-pane -x 124 &&
-            tmux resize-pane -y 100% &&
-            tmux resize-pane -U 3
+            tmux select-layout tiled \; \
+                 select-pane -t "$TMUX_PANE" \; \
+                 resize-pane -x 124 \; \
+                 resize-pane -y 100% \; \
+                 resize-pane -U 3
         fi
     }
 }
