@@ -36,9 +36,8 @@ define-command ide -params 0..1 %{
             "*make*" | "*debug*") exit;;
         esac
 
-        # exclute new clients
-        [ "$kak_client" = client0 ] && exit
-
-        echo "focus"
+        for existing_client in $kak_client_list; do
+            [ "$kak_client" = "$existing_client" ] && { echo focus; break; }
+        done
     }}
 }
