@@ -14,3 +14,6 @@ evaluate-commands %sh{
         "
     done
 }
+
+# Load local Kakoune config file if it exists
+evaluate-commands %sh{ [ -f "$kak_config/local.kak" ] && echo "source '$kak_config/local.kak'" }
