@@ -1,35 +1,35 @@
 set-option global startup_info_version 20200901
 set-option -add global ui_options ncurses_assistant=cat
 
-# Per-Buffer indendation fallbacks/defaults
-hook global BufSetOption filetype=c|cpp %{
-    set-option buffer indentwidth 0
-    set-option buffer tabstop 8
+# Per-Winfer indendation fallbacks/defaults
+hook global WinSetOption filetype=c|cpp %{
+    set-option window indentwidth 0
+    set-option window tabstop 8
 }
-hook global BufSetOption filetype=latex|context %{
-    set-option buffer indentwidth 2
-    set-option buffer tabstop 4
+hook global WinSetOption filetype=latex|context %{
+    set-option window indentwidth 2
+    set-option window tabstop 4
 }
-hook global BufSetOption filetype=makefile %{
-  set-option buffer indentwidth 0
-  set-option buffer tabstop 8
+hook global WinSetOption filetype=makefile %{
+    set-option window indentwidth 0
+    set-option window tabstop 8
 }
-hook global BufSetOption filetype=python %{
-    set-option buffer indentwidth 4
-    set-option buffer tabstop 4
-    set-option buffer autowrap_column 120
+hook global WinSetOption filetype=python %{
+    set-option window indentwidth 4
+    set-option window tabstop 4
+    set-option window autowrap_column 120
 }
-hook global BufSetOption filetype=git-commit %{
-    set-option buffer autowrap_column 73
+hook global WinSetOption filetype=git-commit %{
+    set-option window autowrap_column 73
 }
-hook global BufSetOption filetype=yaml %{
-    set-option buffer indentwidth 2
+hook global WinSetOption filetype=yaml %{
+    set-option window indentwidth 2
 }
-hook global BufSetOption filetype=rust %{
-    set-option buffer formatcmd rustfmt
-    set-option buffer autowrap_column 100
-    set-option buffer makecmd "cargo"
-    map -docstring "cargo run" buffer user m ": make run<ret>"
+hook global WinSetOption filetype=rust %{
+    set-option window formatcmd rustfmt
+    set-option window autowrap_column 100
+    set-option window makecmd "cargo"
+    map -docstring "cargo run" window user m ": make run<ret>"
 }
 
 # highlighters
@@ -40,8 +40,8 @@ add-highlighter global/ wrap -word
 set-face global Whitespace rgb:303030+f
 add-highlighter global/ show-whitespaces
 
-hook global BufSetOption autowrap_column=.* %{
-    add-highlighter -override buffer/autowrap_column column %opt{autowrap_column} default,red
+hook global WinSetOption autowrap_column=.* %{
+    add-highlighter -override window/autowrap_column column %opt{autowrap_column} default,red
 }
 
 # delete with D aswell for convenience
