@@ -93,37 +93,6 @@ alias global s scratch
 alias global qa kill
 alias global qa! kill!
 
-define-command ide -params 0..1 %{
-    try %{ rename-session %arg{1} }
-
-    rename-client main
-    set-option global jumpclient main
-
-    evaluate-commands %sh{
-        if ! grep --quiet --word-regexp docs -- <(echo "$kak_client_list")
-        then
-            echo "new edit *debug* \; rename-client docs"
-            echo "set-option global docsclient docs"
-        fi
-
-        if ! grep --quiet --word-regexp tools -- <(echo "$kak_client_list")
-        then
-            echo "new edit *debug* \; rename-client tools"
-            echo "set-option global toolsclient tools"
-        fi
-    }
-
-    nop %sh{
-        if [ -n "$TMUX" ]; then
-            tmux select-layout tiled \; \
-                 select-pane -t "$TMUX_PANE" \; \
-                 resize-pane -x 124 \; \
-                 resize-pane -y 100% \; \
-                 resize-pane -U 3
-        fi
-    }
-}
-
 evaluate-commands %sh{
     [ -n "$TMUX" ] && printf "%s\n" \
         "require-module tmux" \

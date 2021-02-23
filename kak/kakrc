@@ -1,6 +1,7 @@
 evaluate-commands %sh{
     config_files="
         common.kak
+        ide.kak
         plugins.kak
     "
 
