@@ -29,7 +29,8 @@ hook global WinSetOption filetype=rust %{
     set-option window formatcmd rustfmt
     set-option window autowrap_column 100
     set-option window makecmd "cargo"
-    map -docstring "cargo run" window user m ": make run<ret>"
+    map -docstring "cargo build" window user m ": make build<ret>"
+    map -docstring "cargo run"   window user r ": make run<ret>"
 }
 
 # highlighters
