@@ -31,9 +31,14 @@ define-command ide -params 0..1 %{
     }
 
     # focus client when the displayed window changes
-    hook global WinDisplay .* %{ eval %sh{
-        if [ "$kak_client" = "$kak_opt_jumpclient" ] || [ "$kak_client" = "$kak_opt_docsclient" ]; then
-            echo focus "$kak_client"
-        fi
+    hook -group focusclient global WinDisplay .* %{ evaluate-commands %sh{
+        case "$kak_bufname" in
+            "*make*" | "*debug*") exit;;
+        esac
+
+        # exclute new clients
+        [ "$kak_client" = client0 ] && exit
+
+        echo "focus"
     }}
 }
