@@ -128,7 +128,7 @@ define-command -params .. fifo %{ evaluate-commands %sh{
 
 # empty *scratch* buffer when kak is started file argument
 hook -once global BufCreate .* %{ evaluate-commands %sh{
-    if [ 'x*scratch*' = "x$kak_bufname" ]; then
+    if [ '*scratch*' = "$kak_bufname" ]; then
         echo "execute-keys \%\\d"
     fi
 }}
