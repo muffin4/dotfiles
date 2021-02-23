@@ -93,11 +93,19 @@ define-command ide -params 0..1 %{
     rename-client main
     set-option global jumpclient main
 
-    new rename-client docs
-    set-option global docsclient docs
+    eval %sh{
+        if ! grep --quiet --word-regexp docs -- <(echo "$kak_client_list")
+        then
+            echo "new edit *debug* \; rename-client docs"
+            echo "set-option global docsclient docs"
+        fi
 
-    new rename-client tools
-    set-option global toolsclient tools
+        if ! grep --quiet --word-regexp tools -- <(echo "$kak_client_list")
+        then
+            echo "new edit *debug* \; rename-client tools"
+            echo "set-option global toolsclient tools"
+        fi
+    }
 }
 
 evaluate-commands %sh{
