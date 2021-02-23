@@ -87,6 +87,10 @@ set-option global autocomplete prompt
 define-command -docstring "open a new scratch buffer, not linked to a file" scratch %{ edit -scratch }
 alias global s scratch
 
+# quit all
+alias global qa kill
+alias global qa! kill!
+
 define-command ide -params 0..1 %{
     try %{ rename-session %arg{1} }
 
