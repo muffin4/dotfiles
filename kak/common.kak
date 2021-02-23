@@ -31,6 +31,7 @@ hook global WinSetOption filetype=rust %{
     set-option window makecmd "cargo"
     map -docstring "cargo build" window user m ": make build<ret>"
     map -docstring "cargo run"   window user r ": make run<ret>"
+    map -docstring "cargo test"  window user t ": make test<ret>"
 }
 
 # highlighters
