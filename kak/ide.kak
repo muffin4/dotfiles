@@ -7,14 +7,14 @@ define-command ide -params 0..1 %{
     evaluate-commands %sh{
         if ! grep --quiet --word-regexp docs -- <(echo "$kak_client_list")
         then
-            echo "new edit *debug* \; rename-client docs"
             echo "set-option global docsclient docs"
+            echo "new rename-client docs \; edit *debug*"
         fi
 
         if ! grep --quiet --word-regexp tools -- <(echo "$kak_client_list")
         then
-            echo "new edit *debug* \; rename-client tools"
             echo "set-option global toolsclient tools"
+            echo "new rename-client tools \; edit *debug*"
         fi
     }
 
