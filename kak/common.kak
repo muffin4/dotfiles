@@ -1,6 +1,9 @@
 set-option global startup_info_version 20200901
 set-option -add global ui_options ncurses_assistant=cat
 
+# prevent *Idle hooks while typing
+set-option global idle_timeout 175
+
 # Per-Winfer indendation fallbacks/defaults
 hook global WinSetOption filetype=c|cpp %{
     set-option window indentwidth 0
