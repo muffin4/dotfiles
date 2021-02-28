@@ -83,8 +83,14 @@ map -docstring "save buffer" global user w ": write<ret>"
 map global normal = \
     ':prompt math: %{exec "!printf ""%%s"" ""$(echo ""%val{text}"" | bc)""<lt>ret<gt>"}<ret>'
 
-hook global -always BufOpenFifo '\*grep\*' %{ map -- global normal - ': grep-next-match<ret>' }
-hook global -always BufOpenFifo '\*make\*' %{ map -- global normal - ': make-next-error<ret>' }
+hook global -always BufOpenFifo '\*grep\*' %{
+    map -- global normal - ': grep-next-match<ret>'
+    map -- global normal <a-minus> ': grep-previous-match<ret>'
+}
+hook global -always BufOpenFifo '\*make\*' %{
+    map -- global normal - ': make-next-error<ret>'
+    map -- global normal <a-minus> ': make-previous-error<ret>'
+}
 
 # only show autocomplete options when prompting for them
 set-option global autocomplete prompt
