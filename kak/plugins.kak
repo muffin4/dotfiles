@@ -62,7 +62,7 @@ plug "andreyorst/smarttab.kak" defer smarttab %{
 }
 
 # Kakoune Language Server Protocol Client
-plug "ul/kak-lsp" do %{
+plug "kak-lsp/kak-lsp" do %{
     cargo build --release --locked
     cargo install --force --path .
 } config %{
