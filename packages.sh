@@ -14,6 +14,7 @@ programs=(
     noto-fonts-emoji # emoji fonts
     ttf-font-awesome # icon font
     ttf-fira-code # monospace font
+    ttf-fira-mono # monospace font
     gnome
     gnome-tweaks
     dconf-editor
