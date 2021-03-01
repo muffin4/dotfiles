@@ -29,15 +29,4 @@ define-command ide -params 0..1 %{
                 resize-pane -U 3
         fi
     }
-
-    # focus client when the displayed window changes
-    hook -group focusclient global WinDisplay .* %{ evaluate-commands %sh{
-        case "$kak_bufname" in
-            "*make*" | "*debug*") exit;;
-        esac
-
-        for existing_client in $kak_client_list; do
-            [ "$kak_client" = "$existing_client" ] && { echo focus; break; }
-        done
-    }}
 }
