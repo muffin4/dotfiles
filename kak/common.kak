@@ -17,10 +17,10 @@ hook global WinSetOption filetype=makefile %{
 hook global WinSetOption filetype=python %{
     set-option window indentwidth 4
     set-option window tabstop 4
-    set-option window autowrap_column 120
+    set-option window autowrap_column 79
 }
 hook global WinSetOption filetype=git-commit %{
-    set-option window autowrap_column 73
+    set-option window autowrap_column 72
 }
 hook global WinSetOption filetype=yaml %{
     set-option window indentwidth 2
@@ -43,7 +43,15 @@ set-face global Whitespace rgb:dddddd+f
 add-highlighter global/ show-whitespaces
 
 hook global WinSetOption autowrap_column=.* %{
-    add-highlighter -override window/autowrap_column column %opt{autowrap_column} default,red
+    evaluate-commands %sh{
+        name=window/autowrap_column
+        if [ "$kak_opt_autowrap_column" -gt 0 ]; then
+            column=$(($kak_opt_autowrap_column + 1))
+            echo "add-highlighter -override $name column $column default,red"
+        else
+            echo "remove-highlighter $name"
+        fi
+    }
 }
 
 # delete with D aswell for convenience
