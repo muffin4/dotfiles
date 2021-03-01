@@ -121,7 +121,7 @@ evaluate-commands %sh{
 
 # Highlight the word under the cursor
 set-face global CurWord default,rgba:f0f0f040
-hook global NormalIdle .* %{
+define-command -hidden highlight-current-word %{
     eval -draft %{ try %{
         exec <space><a-i>w <a-k>\A\w+\z<ret>
         add-highlighter -override global/curword regex "\b\Q%val{selection}\E\b" 0:CurWord
@@ -129,6 +129,9 @@ hook global NormalIdle .* %{
         add-highlighter -override global/curword group
     } }
 }
+
+hook global InsertIdle .* highlight-current-word
+hook global NormalIdle .* highlight-current-word
 
 define-command -params .. fifo %{ evaluate-commands %sh{
     output=$(mktemp -d "${TMPDIR:-/tmp}"/kak-fifo.XXXXXXXX)/fifo
