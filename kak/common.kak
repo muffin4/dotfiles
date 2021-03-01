@@ -39,7 +39,7 @@ add-highlighter global/ show-matching
 add-highlighter global/ number-lines -separator " " -hlcursor -min-digits 3
 add-highlighter global/ wrap -word
 
-set-face global Whitespace rgb:303030+f
+set-face global Whitespace rgb:dddddd+f
 add-highlighter global/ show-whitespaces
 
 hook global WinSetOption autowrap_column=.* %{
@@ -112,7 +112,7 @@ evaluate-commands %sh{
 }
 
 # Highlight the word under the cursor
-set-face global CurWord default,rgba:30303040
+set-face global CurWord default,rgba:f0f0f040
 hook global NormalIdle .* %{
     eval -draft %{ try %{
         exec <space><a-i>w <a-k>\A\w+\z<ret>
