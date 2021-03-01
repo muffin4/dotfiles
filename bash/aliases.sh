@@ -13,7 +13,7 @@ alias pamcan=pacman
 alias g=git
 alias cal='cal --monday'
 alias grep='grep --color=auto --binary-files=without-match'
-alias rg='rg --hidden --follow'
+alias rg='rg --hidden'
 alias diff="diff --color=auto"
 alias bc="bc --mathlib --quiet"
 alias hibernate="systemctl hibernate"
