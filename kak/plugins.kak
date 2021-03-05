@@ -69,6 +69,6 @@ plug "kak-lsp/kak-lsp" do %{
     set-option global lsp_server_configuration pyls.configurationSources=["flake8"]
     hook global WinSetOption filetype=(rust|python|c) %{
         lsp-enable-window
+        map -docstring "enter lsp mode" window user l ": enter-user-mode lsp<ret>"
     }
-    map -docstring "enter lsp mode" global user l ": enter-user-mode lsp<ret>"
 }
