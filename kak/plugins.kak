@@ -66,6 +66,7 @@ plug "kak-lsp/kak-lsp" do %{
     cargo build --release --locked
     cargo install --force --path .
 } config %{
+    set-option global lsp_server_configuration pyls.configurationSources=["flake8"]
     hook global WinSetOption filetype=(rust|python|c) %{
         lsp-enable-window
     }
