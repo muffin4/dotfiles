@@ -21,6 +21,7 @@ hook global WinSetOption filetype=python %{
 }
 hook global WinSetOption filetype=git-commit %{
     set-option window autowrap_column 72
+    autowrap-enable
 }
 hook global WinSetOption filetype=yaml %{
     set-option window indentwidth 2
