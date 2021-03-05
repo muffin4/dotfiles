@@ -84,6 +84,7 @@ hook global InsertChar \. %{ try %{
 map global normal '#' ": comment-line<ret>"
 map -docstring "run makecmd" global user m ": make<ret>"
 map -docstring "save buffer" global user w ": write<ret>"
+map -docstring "format buffer" global user = ": format<ret>"
 
 # insert result of math
 map global normal = \
