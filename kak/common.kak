@@ -86,10 +86,6 @@ map -docstring "run makecmd" global user m ": make<ret>"
 map -docstring "save buffer" global user w ": write<ret>"
 map -docstring "format buffer" global user = ": format<ret>"
 
-# insert result of math
-map global normal = \
-    ':prompt math: %{exec "!printf ""%%s"" ""$(echo ""%val{text}"" | bc)""<lt>ret<gt>"}<ret>'
-
 hook global -always BufOpenFifo '\*grep\*' %{
     map -- global normal - ': grep-next-match<ret>'
     map -- global normal <a-minus> ': grep-previous-match<ret>'
