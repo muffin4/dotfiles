@@ -84,6 +84,7 @@ hook global InsertChar \. %{ try %{
 map global normal '#' ": comment-line<ret>"
 map -docstring "run makecmd" global user m ": make<ret>"
 map -docstring "save buffer" global user w ": write<ret>"
+map -docstring "quit" global user q ": quit<ret>"
 map -docstring "format buffer" global user = ": format<ret>"
 
 hook global -always BufOpenFifo '\*grep\*' %{
