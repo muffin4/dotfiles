@@ -55,6 +55,9 @@ hook global WinSetOption autowrap_column=.* %{
     }
 }
 
+# use EditorConfig: https://editorconfig.org/
+hook global WinCreate ^[^*]+$ editorconfig-load
+
 # delete with D aswell for convenience
 map -docstring "delete" global normal D d
 
