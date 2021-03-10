@@ -1,38 +1,38 @@
 set-option global startup_info_version 20200901
 set-option -add global ui_options ncurses_assistant=cat
 
-# Per-Winfer indendation fallbacks/defaults
-hook global WinSetOption filetype=c|cpp %{
-    set-option window indentwidth 0
-    set-option window tabstop 8
+# indendation fallbacks/defaults
+hook global BufSetOption filetype=c|cpp %{
+    set-option buffer indentwidth 0
+    set-option buffer tabstop 8
 }
-hook global WinSetOption filetype=latex|context %{
-    set-option window indentwidth 2
-    set-option window tabstop 4
+hook global BufSetOption filetype=latex|context %{
+    set-option buffer indentwidth 2
+    set-option buffer tabstop 4
 }
-hook global WinSetOption filetype=makefile %{
-    set-option window indentwidth 0
-    set-option window tabstop 8
+hook global BufSetOption filetype=makefile %{
+    set-option buffer indentwidth 0
+    set-option buffer tabstop 8
 }
-hook global WinSetOption filetype=python %{
-    set-option window indentwidth 4
-    set-option window tabstop 4
-    set-option window autowrap_column 79
+hook global BufSetOption filetype=python %{
+    set-option buffer indentwidth 4
+    set-option buffer tabstop 4
+    set-option buffer autowrap_column 79
 }
-hook global WinSetOption filetype=git-commit %{
-    set-option window autowrap_column 72
+hook global BufSetOption filetype=git-commit %{
+    set-option buffer autowrap_column 72
     autowrap-enable
 }
-hook global WinSetOption filetype=yaml %{
-    set-option window indentwidth 2
+hook global BufSetOption filetype=yaml %{
+    set-option buffer indentwidth 2
 }
-hook global WinSetOption filetype=rust %{
-    set-option window formatcmd rustfmt
-    set-option window autowrap_column 100
-    set-option window makecmd "cargo"
-    map -docstring "cargo build" window user m ": make build<ret>"
-    map -docstring "cargo run"   window user r ": make run<ret>"
-    map -docstring "cargo test"  window user t ": make test<ret>"
+hook global BufSetOption filetype=rust %{
+    set-option buffer formatcmd rustfmt
+    set-option buffer autowrap_column 100
+    set-option buffer makecmd "cargo"
+    map -docstring "cargo build" buffer user m ": make build<ret>"
+    map -docstring "cargo run"   buffer user r ": make run<ret>"
+    map -docstring "cargo test"  buffer user t ": make test<ret>"
 }
 
 # highlighters
