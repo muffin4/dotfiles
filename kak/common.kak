@@ -153,18 +153,18 @@ hook -once global BufCreate .* %{ evaluate-commands %sh{
 }}
 
 # window mode
-declare-user-mode window
+declare-user-mode client
 
 map -docstring "enter window mode" \
-    global normal <c-w> ": enter-user-mode window<ret>"
+    global normal <c-w> ": enter-user-mode client<ret>"
 map -docstring "quit" \
-    global window <c-q> ": quit<ret>"
+    global client <c-q> ": quit<ret>"
 
 evaluate-commands %sh{
     echo 'map -docstring "split horizontally" \
-        global window <c-s> \
+        global client <c-s> \
         ": tmux-terminal-horizontal kak -c %%val{session}<ret>"'
     echo 'map -docstring "split vertically" \
-        global window <c-v> \
+        global client <c-v> \
         ": tmux-terminal-vertical kak -c %%val{session}<ret>"'
 }
