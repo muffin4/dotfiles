@@ -52,7 +52,6 @@ map -docstring "delete" global normal D d
 # scrolling
 map -docstring "scroll down" global normal <c-e> vj
 map -docstring "scroll up" global normal <c-y> vk
-set-option global scrolloff 2,0
 
 define-command copy-to-clipboard %{ nop %sh{
     [ -n "$TMUX" ] && tmux set-buffer -- "$kak_selection"
