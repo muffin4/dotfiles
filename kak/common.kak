@@ -43,18 +43,6 @@ add-highlighter global/ wrap -word
 set-face global Whitespace rgb:dddddd+f
 add-highlighter global/ show-whitespaces
 
-hook global WinSetOption autowrap_column=.* %{
-    evaluate-commands %sh{
-        name=window/autowrap_column
-        if [ "$kak_opt_autowrap_column" -gt 0 ]; then
-            column=$(($kak_opt_autowrap_column + 1))
-            echo "add-highlighter -override $name column $column default,red"
-        else
-            echo "remove-highlighter $name"
-        fi
-    }
-}
-
 # use EditorConfig: https://editorconfig.org/
 hook global WinCreate ^[^*]+$ editorconfig-load
 
