@@ -141,10 +141,10 @@ hook -once global BufCreate .* %{ evaluate-commands %sh{
     fi
 }}
 
-# window mode
+# client mode
 declare-user-mode client
 
-map -docstring "enter window mode" \
+map -docstring "enter client mode" \
     global normal <c-w> ": enter-user-mode client<ret>"
 map -docstring "quit" \
     global client <c-q> ": quit<ret>"
