@@ -37,3 +37,6 @@
 [submodule "vim/pack/isa/start/editorconfig-vim"]
 	path = vim/pack/isa/start/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "vim/pack/isa/start/papercolor-theme"]
+	path = vim/pack/isa/start/papercolor-theme
+	url = https://github.com/NLKNguyen/papercolor-theme.git

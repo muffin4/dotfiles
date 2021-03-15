@@ -55,13 +55,11 @@ if &t_Co > 2 || has("gui_running")
   if !exists("g:syntax_on")
     syntax enable
   endif
-  set background=dark
+  set background=light
+  colorscheme PaperColor
   if has("win32") || has("win16")
-    colorscheme desert
     set guifont=Courier_New:h10:cANSI:qDRAFT
   else
-    colorscheme angr
-    highlight Normal ctermbg=NONE
     set guifont=Fira\ Code\ 12
   endif
 endif
