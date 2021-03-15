@@ -17,6 +17,7 @@ alias rg='rg --hidden'
 alias diff="diff --color=auto"
 alias bc="bc --mathlib --quiet"
 alias hibernate="systemctl hibernate"
+alias v=vim
 alias k=kak
 
 alias tmuxdotties='tmux new -c ~/dotfiles -s dotties -A'
