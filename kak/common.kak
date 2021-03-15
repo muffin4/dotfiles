@@ -155,3 +155,33 @@ evaluate-commands %sh{
         global client <c-v> \
         ": tmux-terminal-vertical kak -c %%val{session}<ret>"'
 }
+
+# make goto only move view if necessary
+define-command -hidden -params 1 goto-line %{ evaluate-commands %sh{
+    count=$1
+    if [ $count -eq 0 ]; then
+        echo execute-keys "0g"
+    else
+        set -- $kak_window_range
+        top=$(( $1 + 1 ))
+        bottom=$(( $1 + $3 ))
+
+        if (( count < top )) || (( count > bottom )); then
+            echo "execute-keys ${count}g"
+        else
+            line=$kak_cursor_line
+            move=$(( count - line ))
+
+            if [ $move = 0 ]; then
+                echo "execute-keys 'gh'"
+            elif [ $move -gt 0 ]; then
+                echo "execute-keys ' ${move}jgh'"
+            else
+                move=$(( 0 - move ))
+                echo "execute-keys ' ${move}kgh'"
+            fi
+        fi
+    fi
+}}
+
+map global normal g ": goto-line %%val{count}<ret>"
