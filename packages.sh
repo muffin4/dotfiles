@@ -3,7 +3,6 @@ set -eu
 programs=(
     pacman-contrib # rankmirros
     gvim
-    vim-jedi # plugin for python autocompletion
     kakoune # code editor
     editorconfig-core-c
     rofi # window switcher, application launcher
