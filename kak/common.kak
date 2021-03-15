@@ -34,6 +34,9 @@ hook global BufSetOption filetype=rust %{
     map -docstring "cargo test"  window user t ": make test<ret>"
 }
 
+# use EditorConfig: https://editorconfig.org/
+hook global WinCreate ^[^*]+$ editorconfig-load
+
 # highlighters
 add-highlighter global/ show-matching
 add-highlighter global/ number-lines -separator " " -hlcursor -min-digits 3

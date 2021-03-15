@@ -3,6 +3,7 @@ set -eu
 programs=(
     pacman-contrib # rankmirros
     kakoune # code editor
+    editorconfig-core-c
     rofi # window switcher, application launcher
     firefox # emergency web browser
     git
