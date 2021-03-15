@@ -16,10 +16,10 @@ hook global BufSetOption filetype=makefile %{
 }
 hook global BufSetOption filetype=python %{
     set-option buffer indentwidth 4
-    set-option window tabstop 4
+    set-option buffer tabstop 4
 }
 hook global BufSetOption filetype=git-commit %{
-    set-option window autowrap_column 72
+    set-option buffer autowrap_column 72
     autowrap-enable
 }
 hook global BufSetOption filetype=yaml %{
@@ -27,11 +27,11 @@ hook global BufSetOption filetype=yaml %{
 }
 hook global BufSetOption filetype=rust %{
     set-option buffer formatcmd rustfmt
-    set-option window autowrap_column 100
-    set-option window makecmd "cargo"
-    map -docstring "cargo build" window user m ": make build<ret>"
-    map -docstring "cargo run"   window user r ": make run<ret>"
-    map -docstring "cargo test"  window user t ": make test<ret>"
+    set-option buffer autowrap_column 100
+    set-option buffer makecmd "cargo"
+    map -docstring "cargo build" buffer user m ": make build<ret>"
+    map -docstring "cargo run"   buffer user r ": make run<ret>"
+    map -docstring "cargo test"  buffer user t ": make test<ret>"
 }
 
 # use EditorConfig: https://editorconfig.org/
@@ -45,17 +45,8 @@ add-highlighter global/ wrap -word
 set-face global Whitespace rgb:dddddd+f
 add-highlighter global/ show-whitespaces
 
-hook global WinSetOption autowrap_column=.* %{
-    evaluate-commands %sh{
-        name=window/autowrap_column
-        if [ "$kak_opt_autowrap_column" -gt 0 ]; then
-            column=$(($kak_opt_autowrap_column + 1))
-            echo "add-highlighter -override $name column $column default,red"
-        else
-            echo "remove-highlighter $name"
-        fi
-    }
-}
+# use EditorConfig: https://editorconfig.org/
+hook global WinCreate ^[^*]+$ editorconfig-load
 
 # delete with D aswell for convenience
 map -docstring "delete" global normal D d
@@ -63,7 +54,6 @@ map -docstring "delete" global normal D d
 # scrolling
 map -docstring "scroll down" global normal <c-e> vj
 map -docstring "scroll up" global normal <c-y> vk
-set-option global scrolloff 2,0
 
 define-command copy-to-clipboard %{ nop %sh{
     [ -n "$TMUX" ] && tmux set-buffer -- "$kak_selection"
@@ -150,3 +140,50 @@ hook -once global BufCreate .* %{ evaluate-commands %sh{
         echo "execute-keys \%\\d"
     fi
 }}
+
+# window mode
+declare-user-mode client
+
+map -docstring "enter window mode" \
+    global normal <c-w> ": enter-user-mode client<ret>"
+map -docstring "quit" \
+    global client <c-q> ": quit<ret>"
+
+evaluate-commands %sh{
+    echo 'map -docstring "split horizontally" \
+        global client <c-s> \
+        ": tmux-terminal-horizontal kak -c %%val{session}<ret>"'
+    echo 'map -docstring "split vertically" \
+        global client <c-v> \
+        ": tmux-terminal-vertical kak -c %%val{session}<ret>"'
+}
+
+# make goto only move view if necessary
+define-command -hidden -params 1 goto-line %{ evaluate-commands %sh{
+    count=$1
+    if [ $count -eq 0 ]; then
+        echo execute-keys "0g"
+    else
+        set -- $kak_window_range
+        top=$(( $1 + 1 ))
+        bottom=$(( $1 + $3 ))
+
+        if (( count < top )) || (( count > bottom )); then
+            echo "execute-keys ${count}g"
+        else
+            line=$kak_cursor_line
+            move=$(( count - line ))
+
+            if [ $move = 0 ]; then
+                echo "execute-keys 'gh'"
+            elif [ $move -gt 0 ]; then
+                echo "execute-keys ' ${move}jgh'"
+            else
+                move=$(( 0 - move ))
+                echo "execute-keys ' ${move}kgh'"
+            fi
+        fi
+    fi
+}}
+
+map global normal g ": goto-line %%val{count}<ret>"

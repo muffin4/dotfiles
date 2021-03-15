@@ -2,6 +2,7 @@
 set -eu
 programs=(
     pacman-contrib # rankmirros
+    gvim
     kakoune # code editor
     editorconfig-core-c
     rofi # window switcher, application launcher

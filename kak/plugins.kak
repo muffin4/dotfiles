@@ -67,8 +67,14 @@ plug "kak-lsp/kak-lsp" do %{
     cargo install --force --path .
 } config %{
     set-option global lsp_server_configuration pyls.configurationSources=["flake8"]
+
     hook global WinSetOption filetype=(rust|python|c) %{
         lsp-enable-window
         map -docstring "enter lsp mode" window user l ": enter-user-mode lsp<ret>"
+    }
+
+    hook global -always WinSetOption filetype=lsp-goto %{
+        map -- global normal - ': lsp-goto-next-match<ret>'
+        map -- global normal <a-minus> ': lsp-goto-previous-match<ret>'
     }
 }
