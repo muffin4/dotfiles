@@ -28,9 +28,6 @@
 [submodule "vim/pack/isa/start/angr.vim"]
 	path = vim/pack/isa/start/angr.vim
 	url = git@gitlab.com:isa4/angr.vim.git
-[submodule "vim/pack/isa/start/ale"]
-	path = vim/pack/isa/start/ale
-	url = https://github.com/dense-analysis/ale.git
 [submodule "bash/complete-alias"]
 	path = bash/complete-alias
 	url = https://github.com/cykerway/complete-alias.git
