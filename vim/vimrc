@@ -142,18 +142,18 @@ if has('xterm_clipboard')
     endif
 endif
 " copy to tmux buffer
-if has('autocmd') && has_key(environ(), "TMUX")
-    function YankToTmux()
-        if (v:event["regname"] == "") || (v:event["regname"] == "+")
-            let l:content = v:event["regcontents"]->join("\n")
-            if (v:event["regtype"] ==# "V") || (v:event["regtype"] =~ "^")
-                let l:content .= "\n"
-            endif
-            let l:content = shellescape(l:content)
-            call system("tmux set-buffer -- " . l:content)
+function YankToTmux()
+    if (v:event["regname"] == "") || (v:event["regname"] == "+")
+        let l:content = v:event["regcontents"]->join("\n")
+        if (v:event["regtype"] ==# "V") || (v:event["regtype"] =~ "^")
+            let l:content .= "\n"
         endif
-    endfunction
-    autocmd TextYankPost * call YankToTmux()
+        let l:content = shellescape(l:content)
+        call system("tmux set-buffer -- " . l:content)
+    endif
+endfunction
+if has('autocmd') && has_key(environ(), "TMUX")
+    " autocmd TextYankPost * call YankToTmux()
 endif
 nnoremap <leader>p o<esc>p
 nnoremap <leader>P O<esc>p
