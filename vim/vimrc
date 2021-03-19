@@ -172,6 +172,11 @@ set complete=.,w,b,u,t,i,kspell
 " Movement {{{
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+" window movement
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
 " }}}
 " Abbreviations {{{
 iabbrev hte the
