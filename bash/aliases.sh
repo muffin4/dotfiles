@@ -22,6 +22,7 @@ alias k=kak
 alias o='$VISUAL'
 
 alias tmuxdotties='tmux new -c ~/dotfiles -s dotties -A'
+alias tmuxjornal='tmux new -c ~/.jornal -s jornal -A'
 alias sed4='sed -e "1s/..../& /g"'
 
 type _complete_alias &>/dev/null && while read line; do
