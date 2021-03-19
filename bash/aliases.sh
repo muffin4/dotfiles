@@ -19,6 +19,7 @@ alias bc="bc --mathlib --quiet"
 alias hibernate="systemctl hibernate"
 alias v=vim
 alias k=kak
+alias o='$VISUAL'
 
 alias tmuxdotties='tmux new -c ~/dotfiles -s dotties -A'
 alias sed4='sed -e "1s/..../& /g"'
