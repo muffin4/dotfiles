@@ -3,6 +3,10 @@
 if v:progname =~? "evim"
   finish
 endif " }}}
+" vim-plug {{{
+call plug#begin('~/.vim/plugged')
+call plug#end()
+" }}}
 " Misc {{{
 behave xterm
 filetype plugin indent on
