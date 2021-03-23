@@ -51,6 +51,10 @@ set title
 
 " visual line breaks at 'breakat' characters
 set wrap linebreak
+
+if executable('rg')
+    set grepprg=rg\ --line-number
+endif
 " }}}
 " Mouse {{{
 if has('mouse') " use the mouse if compiled with support for mouse
