@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'bronson/vim-visual-star-search'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'junegunn/gv.vim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
