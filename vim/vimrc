@@ -187,7 +187,7 @@ nnoremap <leader>vv :vsplit $MYVIMRC<cr>
 "set default spelling languages to english and german
 set spelllang=de,en_us
 " enable completion by dictionary when spelling is enabled
-set complete=.,w,b,u,t,i,kspell
+set complete+=kspell
 " }}}
 " Movement {{{
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
