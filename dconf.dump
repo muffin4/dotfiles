@@ -30,10 +30,10 @@ idle-delay=uint32 0
 close=['<Shift><Super>q']
 switch-applications=@as []
 switch-applications-backward=@as []
-switch-group=['<Super>grave']
-switch-group-backward=['<Shift><Super>grave']
-switch-windows=['<Super>Tab']
-switch-windows-backward=['<Shift><Super>Tab']
+switch-group=['<Super>grave','<Alt>grave']
+switch-group-backward=['<Shift><Super>grave','<Shift><Alt>grave']
+switch-windows=['<Super>Tab','<Alt>Tab']
+switch-windows-backward=['<Shift><Super>Tab','<Shift><Alt>Tab']
 toggle-fullscreen=['<Super>f']
 
 [org/gnome/desktop/wm/preferences]
@@ -48,7 +48,7 @@ night-light-enabled=true
 
 [org/gnome/settings-daemon/plugins/media-keys]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/']
-screensaver=['<Alt>Tab']
+screensaver=['<Super>i']
 volume-down=['<Shift><Super>underscore']
 volume-mute=['<Shift><Super>m']
 volume-up=['<Shift><Super>plus']
