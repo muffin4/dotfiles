@@ -153,14 +153,6 @@ map <space> <leader>
 nnoremap <leader>w :w<cr>
 " }}}
 " Clipboard {{{
-" use + register by default
-if has('xterm_clipboard')
-    if has('unnamedplus')
-        set clipboard=unnamedplus
-    else
-        set clipboard=unnamed
-    endif
-endif
 " copy to tmux buffer
 function YankToTmux()
     if (v:event["regname"] == "") || (v:event["regname"] == "+")
