@@ -1,5 +1,5 @@
 configuration {
-	font: "Fira Code 14";
+	font: "Fira Mono 14";
 	theme: "/usr/share/rofi/themes/Arc-Dark.rasi";
 	kb-row-down: "Down,Control+n,Tab";
 	kb-row-tab: "";
