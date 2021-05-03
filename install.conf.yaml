@@ -21,6 +21,7 @@
     ~/.config/khal:
     ~/.config/kitty:
     ~/.config/mpv:
+    ~/.config/nvim:
     ~/.config/ripgreprc:
     ~/.config/rofi:
     ~/.config/systemd:
