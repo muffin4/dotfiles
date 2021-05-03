@@ -1,8 +1,8 @@
 include "/usr/share/themes/Arc/gtk-2.0/gtkrc"
 style "user-font"
 {
-	font_name="Fira Code"
+	font_name="Fira Mono"
 }
 widget_class "*" style "user-font"
-gtk-font-name="Fira Code 9"
+gtk-font-name="Fira Mono 9"
 gtk-icon-theme-name="Arc"
