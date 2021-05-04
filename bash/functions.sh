@@ -42,3 +42,15 @@ mpv () {
         command mpv "$@"
     fi
 }
+
+alarm () {
+    if [ $# -lt 1 ]; then
+        echo "usage:"
+        echo "    alarm time [message]"
+        return 1
+    fi
+
+    termdown "$1"
+    shift
+    notify-send -u critical Alarm "$*"
+}

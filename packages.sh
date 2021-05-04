@@ -11,6 +11,7 @@ programs=(
     kitty # terminal emulator
     bash # shell
     bash-completion
+    termdown # terminal countdown clock
     xorg-server
     ttf-dejavu # font fixes
     noto-fonts-emoji # emoji fonts
