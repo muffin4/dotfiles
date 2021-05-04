@@ -2,7 +2,8 @@
 set -eu
 programs=(
     pacman-contrib # rankmirros
-    gvim
+    neovim
+    python-pynvim # python client for neovim
     kakoune # code editor
     editorconfig-core-c
     rofi # window switcher, application launcher

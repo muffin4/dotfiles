@@ -17,7 +17,8 @@ alias rg='rg --hidden'
 alias diff="diff --color=auto"
 alias bc="bc --mathlib --quiet"
 alias hibernate="systemctl hibernate"
-alias v=vim
+alias v=nvim
+alias vim=nvim
 alias k=kak
 alias o='$VISUAL'
 

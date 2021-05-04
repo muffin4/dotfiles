@@ -7,7 +7,7 @@ sleepuntil () {
 }
 
 xargsvim () {
-    xargs "$@" "$SHELL" -c '</dev/tty vim "$@"' ignoreme
+    xargs "$@" "$SHELL" -c '</dev/tty nvim "$@"' ignoreme
 }
 
 shtart () {
@@ -29,7 +29,7 @@ fi
 sudo () {
     case $1 in
     kak|k) shift ; SUDO_EDITOR=kak sudoedit "$@" ;;
-    vim|v) shift ; SUDO_EDITOR=vim sudoedit "$@" ;;
+    nvim|vim|v) shift ; SUDO_EDITOR=nvim sudoedit "$@" ;;
     o) shift ; SUDO_EDITOR=$VISUAL sudoedit "$@" ;;
     *) command sudo "$@" ;;
     esac
