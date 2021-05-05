@@ -113,7 +113,6 @@ set guioptions-=b   " bottom scrollbar
 set guicursor=n-v-c-ve-o-i-ci-r-cr-sm:block-Cursor/lCursor-blinkoff0
 " }}}
 " Searching {{{
-set ignorecase smartcase    " ignore case when searching without capital letters
 set incsearch               " search as characters are entered
 set hlsearch                " highlight all visible matches
 " make backspace remove search highlights
