@@ -45,13 +45,12 @@ class Passmenu:
         return self.selection
 
     def copy_password(self, seconds: int):
-        if not hasattr(self, 'selection'):
-            self.make_selection()
+        selection = self.get_selection()
         if seconds is not None:
             os.environ['PASSWORD_STORE_CLIP_TIME'] = str(seconds)
         self.clear_clipboard()
         subprocess.run(
-                ['pass', 'show', f'-c{self.line_number}', self.selection],
+                ['pass', 'show', f'-c{self.line_number}', selection],
                 check=True,
         )
 
