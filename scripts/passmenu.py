@@ -30,13 +30,6 @@ class Passmenu:
         filenames = glob.iglob(f'{prefix}/**/*.gpg', recursive=True)
         return sorted(f[len(prefix) + 1:-4] for f in filenames)
 
-    def get_prompt(self):
-        prompts = {
-            1: 'pass password',
-            2: 'pass username',
-        }
-        return prompts.get(self.line_number, f'pass line {self.line_number}')
-
     def make_selection(self):
         self.selection = subprocess.run(
                 ["fzf"],
