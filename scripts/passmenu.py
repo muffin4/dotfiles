@@ -8,10 +8,6 @@ import subprocess
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument(
-            '--type',
-            action='store_true',
-    )
-    parser.add_argument(
             '-c',
             '--line-number',
             type=int,
@@ -61,26 +57,12 @@ class Passmenu:
 def main():
     args = parse_args()
     passmenu = Passmenu(args.line_number)
-    if args.type:
-        selection = passmenu.get_selection()
-        pw = subprocess.run(
-                ['pass', 'show', selection],
-                check=True,
-                capture_output=True,
-        ).stdout.splitlines()[args.line_number - 1]
-        subprocess.run(
-                ['xdotool', 'type', '--clearmodifiers', '--file', '-'],
-                check=True,
-                input=pw,
-        )
-    else:
-        password_store_clip_seconds = 10
-        passmenu.copy_password(seconds=password_store_clip_seconds)
-        line_strs = {
-            1: "password",
-            2: "username",
-        }
-        line_str = line_strs.get(args.line_number, f"line {args.line_number}")
+    passmenu.copy_password(seconds=10)
+    line_strs = {
+        1: "password",
+        2: "username",
+    }
+    line_str = line_strs.get(args.line_number, f"line {args.line_number}")
 
 
 if __name__ == '__main__':
