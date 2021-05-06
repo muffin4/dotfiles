@@ -60,12 +60,12 @@ name='Clear Clipboard'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
 binding='<Super>p'
-command='/home/isabelle/.scripts/passmenu.py --line-number=1  --matching=fuzzy'
+command='/home/isabelle/.scripts/passmenu.sh --line-number=1'
 name='Passmenu for password'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2]
 binding='<Super>u'
-command='/home/isabelle/.scripts/passmenu.py --line-number=2  --matching=fuzzy'
+command='/home/isabelle/.scripts/passmenu.sh --line-number=2'
 name='Passmenu for username'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3]

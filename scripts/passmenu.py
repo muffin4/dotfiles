@@ -12,9 +12,6 @@ def parse_args():
             action='store_true',
     )
     parser.add_argument(
-            '--matching',
-    )
-    parser.add_argument(
             '-c',
             '--line-number',
             type=int,
@@ -24,15 +21,14 @@ def parse_args():
 
 
 class Passmenu:
-    def __init__(self, line_number: int, matching: str):
+    def __init__(self, line_number: int):
         self.line_number = line_number
-        self.matching = matching
 
     def get_password_files(self):
         prefix = os.environ.get('PASSWORD_STORE_DIR') or \
             '{HOME}/.password-store'.format(HOME=os.environ['HOME'])
         filenames = glob.iglob(f'{prefix}/**/*.gpg', recursive=True)
-        return sorted(map(lambda f: f[len(prefix) + 1:-4], filenames))
+        return sorted(f[len(prefix) + 1:-4] for f in filenames)
 
     def get_prompt(self):
         prompts = {
@@ -41,22 +37,14 @@ class Passmenu:
         }
         return prompts.get(self.line_number, f'pass line {self.line_number}')
 
-    def get_command_line(self):
-        prompt = self.get_prompt()
-        command_line = ['rofi', '-dmenu', '-p', prompt, '-no-show-match']
-        if self.matching:
-            command_line += ['-matching', self.matching]
-        return command_line
-
     def make_selection(self):
-        command_line = self.get_command_line()
         self.selection = subprocess.run(
-                command_line,
+                ["fzf"],
                 check=True,
                 input="\n".join(self.get_password_files()),
                 text=True,
-                capture_output=True,
-        ).stdout.rstrip('\n')
+                stdout=subprocess.PIPE,
+        ).stdout.rstrip("\n")
 
     def get_selection(self):
         if not hasattr(self, 'selection'):
@@ -80,7 +68,7 @@ class Passmenu:
 
 def main():
     args = parse_args()
-    passmenu = Passmenu(args.line_number, args.matching)
+    passmenu = Passmenu(args.line_number)
     if args.type:
         selection = passmenu.get_selection()
         pw = subprocess.run(
