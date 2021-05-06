@@ -6,7 +6,6 @@ programs=(
     python-pynvim # python client for neovim
     kakoune # code editor
     editorconfig-core-c
-    rofi # window switcher, application launcher
     firefox # emergency web browser
     git
     kitty # terminal emulator

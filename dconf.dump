@@ -72,8 +72,3 @@ name='Passmenu for username'
 binding=''
 command='/usr/bin/kitty'
 name='Kitty'
-
-[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4]
-binding='<Super>Return'
-command='rofi -show window'
-name='Rofi window selection'
