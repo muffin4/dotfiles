@@ -58,11 +58,6 @@ def main():
     args = parse_args()
     passmenu = Passmenu(args.line_number)
     passmenu.copy_password(seconds=10)
-    line_strs = {
-        1: "password",
-        2: "username",
-    }
-    line_str = line_strs.get(args.line_number, f"line {args.line_number}")
 
 
 if __name__ == '__main__':
