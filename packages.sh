@@ -55,6 +55,7 @@ programs=(
     ripgrep # pattern search
     fd # file search
     fzf # fuzzy finder (used by fzf.kak)
+    bat # a cat clone with syntax highlighting and Git integration
 )
 aur_progs=(
 )
