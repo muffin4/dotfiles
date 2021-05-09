@@ -1,4 +1,4 @@
-export BAT_THEME="Solarized (light)"
+export BAT_THEME="GitHub"
 
 export VISUAL=nvim
 [ "$TERM" = "xterm" ] && export TERM=xterm-256color
