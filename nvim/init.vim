@@ -4,7 +4,7 @@ if v:progname =~? "evim"
   finish
 endif " }}}
 " vim-plug {{{
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin(stdpath('config').'/plugged')
 Plug 'bronson/vim-visual-star-search'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
