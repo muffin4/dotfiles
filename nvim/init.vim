@@ -55,6 +55,8 @@ if executable('rg')
 endif
 
 set laststatus=2    " always show status line
+
+set list " show tabs, trailing whitespace, and non breaking space
 " }}}
 " Mouse {{{
 if has('mouse') " use the mouse if compiled with support for mouse
