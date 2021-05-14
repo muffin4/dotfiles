@@ -29,12 +29,6 @@ filetype plugin indent on
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-" keep 50 lines of command line history
-set history=50
-
-" don't create a viminfo file
-set viminfo=""
-
 " make Y behave like C and D
 nnoremap Y y$
 
