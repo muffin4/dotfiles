@@ -87,11 +87,6 @@ if &t_Co > 2 || has("gui_running")
 endif
 " }}}
 " Tabs & Indents {{{
-" always use 4 spaces
-set softtabstop=4   " number of spaces in tab when editing
-set shiftwidth=4    " number of spaces to use for each step of autoindents
-set shiftround      " Round indent to multiple of 'shiftwidth'.
-set expandtab       " insert spaces instead of \t
 set smarttab        " use shiftwidth at the start of a line
 set nosmartindent
 set autoindent      " always set autoindenting on
