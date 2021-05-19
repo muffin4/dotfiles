@@ -5,4 +5,4 @@ setlocal formatprg=gofmt
 
 setlocal nolist
 
-nnoremap <leader>f :call gofmt#apply()<cr>
+nnoremap <silent><leader>f :call gofmt#apply()<cr>
