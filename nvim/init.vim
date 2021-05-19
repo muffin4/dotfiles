@@ -193,5 +193,9 @@ else
     let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 endif
 " }}}
+" go {{{
+" don't highlight trailing whitespace as error
+let g:go_highlight_trailing_whitespace_error = 0
+" }}}
 
 " vim:foldmethod=marker:foldlevel=0
