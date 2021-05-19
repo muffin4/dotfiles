@@ -156,6 +156,9 @@ let mapleader = "\\"
 nmap <space> <leader>
 vmap <space> <leader>
 nnoremap <leader>w :w<cr>
+
+" format whole file using formatexpr or formatprg
+nnoremap <leader>f :normal gggqG<cr>
 " }}}
 " Clipboard {{{
 nnoremap <leader>p o<esc>p
