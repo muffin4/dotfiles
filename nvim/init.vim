@@ -20,6 +20,10 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+
+" go
+let g:gofmt_exe = '/usr/bin/gofmt'
+Plug 'tweekmonster/gofmt.vim'
 call plug#end()
 " }}}
 " Misc {{{
