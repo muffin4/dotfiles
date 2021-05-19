@@ -23,8 +23,7 @@ Plug 'tpope/vim-unimpaired'
 
 " go
 let g:gofmt_exe = '/usr/bin/gofmt'
-let g:gofmt_on_save = 0
-Plug 'tweekmonster/gofmt.vim'
+Plug 'muffin4/gofmt.vim', { 'branch': 'no-empty-changes' }
 call plug#end()
 " }}}
 " Misc {{{
