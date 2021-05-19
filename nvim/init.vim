@@ -98,7 +98,6 @@ set autoindent      " always set autoindenting on
 " }}}
 " UI Layout {{{
 set number          " displays line-numbering at the start of every line
-set relativenumber  " displays relative line-numbering to make jumping around easier
 set ruler           " show the cursor position all the time
 set showcmd         " display incomplete commands
 set nocursorline    " don't highlight current line
