@@ -23,6 +23,7 @@
     ~/.config/kitty:
     ~/.config/mpv:
     ~/.config/nvim:
+    ~/.config/ranger:
     ~/.config/ripgreprc:
     ~/.config/systemd:
     ~/.config/user-dirs.dirs:
