@@ -4,6 +4,8 @@ unset HISTFILE
 
 # are we an interactive shell?
 if [ "$PS1" ]; then
+    set -o vi # use a vi-style line editing interface
+
     config_files=(
         ~/.config/bash/aliases.sh
         ~/.config/bash/functions.sh
