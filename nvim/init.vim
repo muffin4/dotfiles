@@ -60,7 +60,16 @@ endif
 
 set laststatus=2    " always show status line
 
-set list " show tabs, trailing whitespace, and non breaking space
+function! MapToggle(key, option)
+    let cmd = ':set ' . a:option . '! \| set ' . a:option . '?<cr>'
+    exec 'nnoremap' a:key cmd
+    exec 'inoremap' a:key ' \<C-O>' . cmd
+endfunction
+command -nargs=+ MapToggle call MapToggle(<f-args>)
+
+MapToggle <F1> list
+MapToggle <F2> wrap
+MapToggle <F3> smartcase
 " }}}
 " Mouse {{{
 if has('mouse') " use the mouse if compiled with support for mouse
