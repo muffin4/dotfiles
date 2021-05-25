@@ -33,6 +33,9 @@ filetype plugin indent on
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+" keep vim default: move cursor to first non-blank after various commands
+set startofline
+
 " make Y behave like C and D
 nnoremap Y y$
 
