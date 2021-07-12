@@ -10,6 +10,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/gv.vim'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'neovim/nvim-lspconfig'
 Plug 'shumphrey/fugitive-gitlab.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
@@ -208,6 +209,27 @@ endif
 " go {{{
 " don't highlight trailing whitespace as error
 let g:go_highlight_trailing_whitespace_error = 0
+" }}}
+" lsp {{{
+lua << EOF
+local custom_lsp_attach = function(client)
+	-- See `:help nvim_buf_set_keymap()` for more information
+	vim.api.nvim_buf_set_keymap(0, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})
+	vim.api.nvim_buf_set_keymap(0, 'n', '<c-]>', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true})
+	-- ... and other keymappings for LSP
+
+	-- Use LSP as the handler for omnifunc.
+	--		See `:help omnifunc` and `:help ins-completion` for more information.
+	vim.api.nvim_buf_set_option(0, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+	-- For plugins with an `on_attach` callback, call them here. For example:
+	-- require('completion').on_attach()
+end
+
+require('lspconfig').pyls.setup({
+	on_attach = custom_lsp_attach
+})
+EOF
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
