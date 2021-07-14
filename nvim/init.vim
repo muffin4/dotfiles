@@ -1,7 +1,7 @@
 " Author: Isa Cichon
 " When started as "evim", evim.vim will already have done these settings. {{{
 if v:progname =~? "evim"
-  finish
+	finish
 endif " }}}
 " vim-plug {{{
 call plug#begin(stdpath('config').'/plugged')
@@ -59,15 +59,15 @@ set title
 set wrap linebreak
 
 if executable('rg')
-    set grepprg=rg\ --line-number
+	set grepprg=rg\ --line-number
 endif
 
 set laststatus=2    " always show status line
 
 function! MapToggle(key, option)
-    let cmd = ':set ' . a:option . '! \| set ' . a:option . '?<cr>'
-    exec 'nnoremap' a:key cmd
-    exec 'inoremap' a:key ' \<C-O>' . cmd
+	let cmd = ':set ' . a:option . '! \| set ' . a:option . '?<cr>'
+	exec 'nnoremap' a:key cmd
+	exec 'inoremap' a:key ' \<C-O>' . cmd
 endfunction
 command -nargs=+ MapToggle call MapToggle(<f-args>)
 
@@ -77,26 +77,26 @@ MapToggle <F3> smartcase
 " }}}
 " Mouse {{{
 if has('mouse') " use the mouse if compiled with support for mouse
-  set mouse=a
-  " scroll through time
-  nnoremap <A-ScrollWheelUp> g-
-  nnoremap <A-ScrollWheelDown> g+
+	set mouse=a
+	" scroll through time
+	nnoremap <A-ScrollWheelUp> g-
+	nnoremap <A-ScrollWheelDown> g+
 endif
 " }}}
 " Colors {{{
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
-  if !exists("g:syntax_on")
-    syntax enable
-  endif
-  set background=light
-  colorscheme PaperColor
-  if has("win32") || has("win16")
-    set guifont=Courier_New:h10:cANSI:qDRAFT
-  else
-    set guifont=Fira\ Mono\ 12
-  endif
+	if !exists("g:syntax_on")
+		syntax enable
+	endif
+	set background=light
+	colorscheme PaperColor
+	if has("win32") || has("win16")
+		set guifont=Courier_New:h10:cANSI:qDRAFT
+	else
+		set guifont=Fira\ Mono\ 12
+	endif
 endif
 " }}}
 " Tabs & Indents {{{
@@ -141,12 +141,12 @@ set backup      " keep a backup file
 set writebackup " use a backup file when trying to write a file
 " move file~ and .file.un~ from working directory
 if has("win32") || has("win16")
-  set backupdir=$TEMP//,c:/tmp//,c:/temp//,.
-  set directory=$TEMP//,c:/tmp//,c:/temp//,.
-  set viewdir=$HOME/vimfiles/view
+	set backupdir=$TEMP//,c:/tmp//,c:/temp//,.
+	set directory=$TEMP//,c:/tmp//,c:/temp//,.
+	set viewdir=$HOME/vimfiles/view
 else
-  set backupdir='~/.nvim-tmp//,~/.tmp//,~/tmp//,/var/tmp//,/tmp//,.'
-  set directory='~/.nvim-tmp//,~/.tmp//,~/tmp//,/var/tmp//,/tmp//,.'
+	set backupdir='~/.nvim-tmp//,~/.tmp//,~/tmp//,/var/tmp//,/tmp//,.'
+	set directory='~/.nvim-tmp//,~/.tmp//,~/tmp//,/var/tmp//,/tmp//,.'
 endif
 " }}}
 " Buffers {{{
@@ -196,9 +196,9 @@ let g:jedi#completions_command = ""
 " }}}
 " ctrlp {{{
 if executable('fd')
-    let g:ctrlp_user_command = 'fd . %s --type f '
+	let g:ctrlp_user_command = 'fd . %s --type f '
 else
-    let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+	let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 endif
 " }}}
 " go {{{
