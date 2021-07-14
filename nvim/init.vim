@@ -220,6 +220,14 @@ local custom_lsp_attach = function(client)
 
 	-- For plugins with an `on_attach` callback, call them here. For example:
 	-- require('completion').on_attach()
+
+	-- remove annoying default diagnostics display
+	vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+		vim.lsp.diagnostic.on_publish_diagnostics, {
+			-- Disable virtual text
+			virtual_text = false,
+		}
+	)
 end
 
 require('lspconfig').pyls.setup({
