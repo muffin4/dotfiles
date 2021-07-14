@@ -151,11 +151,6 @@ endif
 " }}}
 " Buffers {{{
 set hidden
-" use arrows to resize window
-nnoremap <silent><Left> :vertical resize -1<CR>
-nnoremap <silent><Right> :vertical resize +1<CR>
-nnoremap <silent><Up> :resize +1<CR>
-nnoremap <silent><Down> :resize -1<CR>
 set splitright " open a new window on the right of the currently active with :vs
 set splitbelow " open a new window below the currently active with :vs
 " }}}
