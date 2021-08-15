@@ -27,13 +27,15 @@ speed=0.0
 idle-delay=uint32 0
 
 [org/gnome/desktop/wm/keybindings]
-close=['<Shift><Super>q']
+activate-window-menu=@as []
+close=['<Super>q']
+minimize=['<Super>z']
 switch-applications=@as []
 switch-applications-backward=@as []
-switch-group=['<Super>grave','<Alt>grave']
-switch-group-backward=['<Shift><Super>grave','<Shift><Alt>grave']
-switch-windows=['<Super>Tab','<Alt>Tab']
-switch-windows-backward=['<Shift><Super>Tab','<Shift><Alt>Tab']
+switch-group=['<Super>grave', '<Alt>grave']
+switch-group-backward=['<Shift><Super>grave', '<Shift><Alt>grave']
+switch-windows=['<Super>Tab', '<Alt>Tab']
+switch-windows-backward=['<Shift><Super>Tab', '<Shift><Alt>Tab']
 toggle-fullscreen=['<Super>f']
 
 [org/gnome/desktop/wm/preferences]
