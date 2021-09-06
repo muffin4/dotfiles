@@ -230,9 +230,12 @@ local custom_lsp_attach = function(client)
 	)
 end
 
-require('lspconfig').pyls.setup({
-	on_attach = custom_lsp_attach
-})
+local lspconfig = require('lspconfig')
+if lspconfig.pyls then
+	lspconfig.pyls.setup({
+		on_attach = custom_lsp_attach
+	})
+end
 EOF
 " }}}
 
