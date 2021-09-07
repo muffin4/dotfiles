@@ -34,7 +34,7 @@ mkfifo --mode=600 "$tmppipe"
         file=\${file#\${prefix}/}
         args+=(\"\$file\")
     done
-    printf \"%s\0\" \"\${args[@]}\" | fzf --read0 > $(printf %q "$tmppipe")
+    printf \"%s\0\" \"\${args[@]}\" | fzf \"--history=\${HOME}/.password-store/fzf.history\" --read0 > $(printf %q "$tmppipe")
 " & selection=$(cat "$tmppipe")
 
 rm "$tmppipe"
