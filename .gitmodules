@@ -1,9 +1,6 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
-[submodule "kak/plugins/plug.kak"]
-	path = kak/plugins/plug.kak
-	url = https://github.com/robertmeta/plug.kak.git
 [submodule "kitty/kitty-themes"]
 	path = kitty/kitty-themes
 	url = https://github.com/dexpota/kitty-themes.git

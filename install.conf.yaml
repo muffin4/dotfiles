@@ -17,8 +17,6 @@
     ~/.config/git:
     ~/.config/git-prompt.sh:
     ~/.config/gtk-3.0: gtk/gtk-3.0
-    ~/.config/kak:
-    ~/.config/kak-lsp:
     ~/.config/khal:
     ~/.config/kitty:
     ~/.config/mpv:

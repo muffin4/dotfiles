@@ -19,7 +19,6 @@ alias bc="bc --mathlib --quiet"
 alias hibernate="systemctl hibernate"
 alias v=vim
 if command -v nvim >/dev/null; then alias vim=nvim; fi
-alias k=kak
 alias o='$VISUAL'
 
 alias tmuxdotties='tmux new -c ~/dotfiles -s dotties -A'

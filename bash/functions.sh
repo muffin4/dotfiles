@@ -28,7 +28,6 @@ fi
 
 sudo () {
     case $1 in
-    kak|k) shift ; SUDO_EDITOR=kak sudoedit "$@" ;;
     nvim|vim|v) shift ; SUDO_EDITOR=nvim sudoedit "$@" ;;
     o) shift ; SUDO_EDITOR=$VISUAL sudoedit "$@" ;;
     *) command sudo "$@" ;;

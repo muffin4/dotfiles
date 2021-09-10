@@ -4,7 +4,6 @@ programs=(
     pacman-contrib # rankmirros
     neovim
     python-pynvim # python client for neovim
-    kakoune # code editor
     editorconfig-core-c
     firefox # emergency web browser
     git
@@ -55,7 +54,7 @@ programs=(
     lolcat # queer culture
     ripgrep # pattern search
     fd # file search
-    fzf # fuzzy finder (used by fzf.kak)
+    fzf # fuzzy finder
     bat # a cat clone with syntax highlighting and Git integration
     ranger # terminal file browser
     w3m # image previews for ranger
