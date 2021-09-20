@@ -74,3 +74,9 @@ name='Passmenu for username'
 binding=''
 command='/usr/bin/kitty'
 name='Kitty'
+
+[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+bold-is-bright=true
+font='Fira Mono 12'
+palette=['rgb(0,0,0)', 'rgb(204,0,0)', 'rgb(78,154,5)', 'rgb(196,160,0)', 'rgb(52,100,164)', 'rgb(116,80,122)', 'rgb(5,152,154)', 'rgb(211,215,207)', 'rgb(84,87,83)', 'rgb(239,40,40)', 'rgb(138,226,52)', 'rgb(252,233,78)', 'rgb(113,158,207)', 'rgb(173,126,167)', 'rgb(52,226,226)', 'rgb(237,237,236)']
+use-system-font=false
