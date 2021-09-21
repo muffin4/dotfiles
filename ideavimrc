@@ -1,1 +1,3 @@
 source ~/.vim/vimrc
+noremap <silent> j j
+noremap <silent> k k
