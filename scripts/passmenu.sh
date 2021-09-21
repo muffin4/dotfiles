@@ -23,7 +23,7 @@ done
 tmppipe=$(mktemp --dry-run)
 mkfifo --mode=600 "$tmppipe"
 
-"$TERMINAL" bash -c "\
+"$TERMINAL" -- bash -c "\
     shopt -s globstar
     prefix=\${PASSWORD_STORE_DIR:-\${HOME}/.password-store}
     files=( \"\$prefix\"/**/*.gpg )
