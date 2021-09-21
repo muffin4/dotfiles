@@ -20,6 +20,7 @@
     ~/.config/khal:
     ~/.config/mpv:
     ~/.config/nvim:
+    ~/.config/paru:
     ~/.config/ranger:
     ~/.config/ripgreprc:
     ~/.config/systemd:
