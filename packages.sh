@@ -7,6 +7,7 @@ programs=(
     editorconfig-core-c
     firefox # emergency web browser
     git
+    kitty # terminal emulator
     bash # shell
     bash-completion
     termdown # terminal countdown clock

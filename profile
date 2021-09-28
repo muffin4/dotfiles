@@ -1,6 +1,6 @@
 export XDG_CONFIG_HOME="$HOME/.config"
 
-export TERMINAL=/usr/bin/gnome-terminal
+export TERMINAL=/usr/bin/kitty
 
 # disable interpreting ctrl-s and ctrl-q as control flow signals
 stty -ixon
