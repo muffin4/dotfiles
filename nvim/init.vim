@@ -74,6 +74,17 @@ command -nargs=+ MapToggle call MapToggle(<f-args>)
 MapToggle <F1> list
 MapToggle <F2> wrap
 MapToggle <F3> smartcase
+
+function! ToggleBackground()
+	if &background == "light"
+		set background=dark
+	else
+		set background=light
+	endif
+	set background?
+endfunction
+nnoremap <silent> <F4> :call ToggleBackground()<cr>
+inoremap <silent> <F4> <C-O>:call ToggleBackground()<cr>
 " }}}
 " Mouse {{{
 if has('mouse') " use the mouse if compiled with support for mouse
