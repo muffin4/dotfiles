@@ -57,7 +57,6 @@ programs=(
     fzf # fuzzy finder
     bat # a cat clone with syntax highlighting and Git integration
     ranger # terminal file browser
-    w3m # image previews for ranger
 )
 aur_progs=(
 )
