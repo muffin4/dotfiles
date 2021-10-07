@@ -1,6 +1,8 @@
 #! /bin/sh
 set -e
 
+cd "$HOME/.config/kitty"
+
 dark=themes/Tango_Dark.conf
 light=themes/Tango_Light.conf
 target=theme.conf
