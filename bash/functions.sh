@@ -29,7 +29,6 @@ fi
 sudo () {
     case $1 in
     nvim|vim|v) shift ; SUDO_EDITOR=nvim sudoedit "$@" ;;
-    o) shift ; SUDO_EDITOR=$VISUAL sudoedit "$@" ;;
     *) command sudo "$@" ;;
     esac
 }
