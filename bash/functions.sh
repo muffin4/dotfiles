@@ -11,7 +11,7 @@ xargsvim () {
 }
 
 shtart () {
-    nohup "$@" 0<&- 1>&- 2>&- &!
+    nohup "$@" >/dev/null 2>&1 </dev/null
 }
 
 if [ "$ZSH_VERSION" ]; then
