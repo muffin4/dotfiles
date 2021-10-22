@@ -148,7 +148,7 @@ set foldnestmax=10      " never use more than 10 folds
 set foldmethod=syntax   " fold based on indent level
 " }}}
 " Backups {{{
-set backup      " keep a backup file
+set nobackup    " do not keep a backup file
 set writebackup " use a backup file when trying to write a file
 " move file~ and .file.un~ from working directory
 if has("win32") || has("win16")
