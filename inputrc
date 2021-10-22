@@ -1,2 +1,9 @@
 Control-p: history-search-backward
 Control-n: history-search-forward
+
+# configure completion
+Tab: menu-complete
+"\e[Z": menu-complete-backward
+set menu-complete-display-prefix on
+set show-all-if-ambiguous on
+#set completion-ignore-case on
