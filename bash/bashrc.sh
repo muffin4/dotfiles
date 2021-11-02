@@ -1,5 +1,7 @@
 [ -f ~/.config/bash/env.sh ] && . ~/.config/bash/env.sh
 
+HISTFILESIZE=infinite
+
 # are we an interactive shell?
 if [ "$PS1" ]; then
     config_files=(
