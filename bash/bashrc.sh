@@ -13,6 +13,8 @@ if [ "$PS1" ]; then
         [ -f "$file" ] && . "$file"
     done
     unset config_files
+
+    shopt -s globstar
 fi
 
 if [ -f ~/.config/bash/bashrc.local.sh ]; then
