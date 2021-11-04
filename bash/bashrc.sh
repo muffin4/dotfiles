@@ -15,6 +15,9 @@ if [ "$PS1" ]; then
     unset config_files
 
     shopt -s globstar
+
+    # disable interpreting ctrl-s and ctrl-q as control flow signals
+    stty -ixon
 fi
 
 if [ -f ~/.config/bash/bashrc.local.sh ]; then
