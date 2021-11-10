@@ -52,3 +52,7 @@ alarm () {
     shift
     notify-send -u critical Alarm "$*"
 }
+
+tmux-cwd () {
+    tmux command-prompt -I "$(pwd)" -p "New session dir:" "attach -c %1"
+}
