@@ -57,7 +57,7 @@ volume-up=['<Shift><Super>plus']
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='<Super>c'
-command='xclip -selection clipboard /dev/null'
+command='/home/isabelle/.scripts/clearclipboard'
 name='Clear Clipboard'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
