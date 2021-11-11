@@ -3,7 +3,6 @@ if [ -n "$WAYLAND_DISPLAY" ]; then
 	wl-copy --clear
 	wl-copy --clear --primary
 else
-	xclip -i /dev/null
-	xclip -i /dev/null -selection clipboard
-	sleep 1 && killall xclip
+	xsel --clear
+	xsel --clear --clipboard
 fi

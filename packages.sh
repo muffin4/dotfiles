@@ -23,6 +23,7 @@ programs=(
     arc-gtk-theme
     arc-icon-theme
     xclip # for clipboard related commands in tmux and i3
+    xsel # for clearing X11 selections
     wl-clipboard # for clipboard support in wayland
     evince # pdf viewer
     thunar # graphical file manager
