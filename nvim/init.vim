@@ -37,9 +37,6 @@ set backspace=indent,eol,start
 " keep vim default: move cursor to first non-blank after various commands
 set startofline
 
-" make Y behave like C and D
-nnoremap Y y$
-
 " shows matching parentheses when inserting one
 set showmatch
 
