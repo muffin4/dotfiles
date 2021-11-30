@@ -11,6 +11,10 @@ usage() {
     exit 1
 }
 
+uniq_fzf_history() {
+	history_file="$HOME/.password-store/fzf.history"
+	uniq "${history_file}" > "${history_file}.uniq" && mv "${history_file}.uniq" "${history_file}"
+}
 
 while getopts hu option
 do
@@ -39,3 +43,4 @@ mkfifo --mode=600 "$tmppipe"
 
 rm "$tmppipe"
 pass show -c"$line" "$selection"
+uniq_fzf_history
