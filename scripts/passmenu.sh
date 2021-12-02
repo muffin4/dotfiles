@@ -41,6 +41,6 @@ mkfifo --mode=600 "$tmppipe"
     printf \"%s\0\" \"\${args[@]}\" | fzf \"--history=\${HOME}/.password-store/fzf.history\" --read0 > $(printf %q "$tmppipe")
 " & selection=$(cat "$tmppipe")
 
+uniq_fzf_history >&- 2>&- <&- & disown -h
 rm "$tmppipe"
 pass show -c"$line" "$selection"
-uniq_fzf_history
