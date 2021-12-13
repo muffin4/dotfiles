@@ -244,8 +244,8 @@ local custom_lsp_attach = function(client)
 end
 
 local lspconfig = require('lspconfig')
-if lspconfig.pyls then
-	lspconfig.pyls.setup({
+if lspconfig.pylsp then
+	lspconfig.pylsp.setup({
 		on_attach = custom_lsp_attach
 	})
 end
