@@ -1,4 +1,4 @@
-export BAT_THEME="Solarized (dark)"
+export BAT_THEME="gruvbox-dark"
 
 export VISUAL=nvim
 export EDITOR=$VISUAL

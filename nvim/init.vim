@@ -5,7 +5,6 @@ if v:progname =~? "evim"
 endif " }}}
 " vim-plug {{{
 call plug#begin(stdpath('config').'/plugged')
-Plug 'altercation/vim-colors-solarized'
 Plug 'bronson/vim-visual-star-search'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
@@ -21,6 +20,11 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+
+" colorschemes
+Plug 'altercation/vim-colors-solarized'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'morhetz/gruvbox'
 
 " go
 let g:gofmt_exe = '/usr/bin/gofmt'
@@ -99,7 +103,7 @@ if &t_Co > 2 || has("gui_running")
 		syntax enable
 	endif
 	set background=dark
-	colorscheme solarized
+	colorscheme gruvbox
 	if has("win32") || has("win16")
 		set guifont=Courier_New:h10:cANSI:qDRAFT
 	else
