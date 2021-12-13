@@ -1,4 +1,4 @@
-export BAT_THEME="GitHub"
+export BAT_THEME="Solarized (dark)"
 
 export VISUAL=nvim
 export EDITOR=$VISUAL

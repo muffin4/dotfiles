@@ -5,11 +5,11 @@ if v:progname =~? "evim"
 endif " }}}
 " vim-plug {{{
 call plug#begin(stdpath('config').'/plugged')
+Plug 'altercation/vim-colors-solarized'
 Plug 'bronson/vim-visual-star-search'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/gv.vim'
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'neovim/nvim-lspconfig'
 Plug 'shumphrey/fugitive-gitlab.vim'
 Plug 'tpope/vim-commentary'
@@ -98,8 +98,8 @@ if &t_Co > 2 || has("gui_running")
 	if !exists("g:syntax_on")
 		syntax enable
 	endif
-	set background=light
-	colorscheme PaperColor
+	set background=dark
+	colorscheme solarized
 	if has("win32") || has("win16")
 		set guifont=Courier_New:h10:cANSI:qDRAFT
 	else
