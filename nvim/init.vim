@@ -259,6 +259,11 @@ if lspconfig.pylsp then
 		on_attach = custom_lsp_attach
 	})
 end
+if lspconfig.rust_analyzer then -- install rustup-analyzer via pacman
+	lspconfig.rust_analyzer.setup({
+		on_attach = custom_lsp_attach
+	})
+end
 EOF
 " }}}
 
