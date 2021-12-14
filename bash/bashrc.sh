@@ -1,6 +1,7 @@
 [ -f ~/.config/bash/env.sh ] && . ~/.config/bash/env.sh
 
 HISTFILESIZE=infinite
+HISTSIZE=infinite
 
 # are we an interactive shell?
 if [ "$PS1" ]; then
