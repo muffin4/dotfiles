@@ -26,6 +26,10 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'morhetz/gruvbox'
 
+" rust
+Plug 'rust-lang/rust.vim'
+let g:rustfmt_autosave = 1
+
 " go
 let g:gofmt_exe = '/usr/bin/gofmt'
 Plug 'muffin4/gofmt.vim', { 'branch': 'no-empty-changes' }
