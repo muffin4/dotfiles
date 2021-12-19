@@ -6,6 +6,7 @@ endif " }}}
 " vim-plug {{{
 call plug#begin(stdpath('config').'/plugged')
 Plug 'bronson/vim-visual-star-search'
+Plug 'preservim/tagbar'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/gv.vim'
@@ -90,6 +91,8 @@ function! ToggleBackground()
 endfunction
 nnoremap <silent> <F4> :call ToggleBackground()<cr>
 inoremap <silent> <F4> <C-O>:call ToggleBackground()<cr>
+
+nnoremap <F8> :TagbarToggle<cr>
 " }}}
 " Mouse {{{
 if has('mouse') " use the mouse if compiled with support for mouse
