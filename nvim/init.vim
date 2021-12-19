@@ -29,7 +29,6 @@ Plug 'morhetz/gruvbox'
 
 " rust
 Plug 'rust-lang/rust.vim'
-let g:rustfmt_autosave = 1
 
 " go
 let g:gofmt_exe = '/usr/bin/gofmt'
