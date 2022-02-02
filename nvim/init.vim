@@ -152,6 +152,7 @@ set guicursor=n-v-c-ve-o-i-ci-r-cr-sm:block-Cursor/lCursor-blinkoff0
 " Searching {{{
 set incsearch               " search as characters are entered
 set hlsearch                " highlight all visible matches
+set ignorecase smartcase    " search case insesitively by default
 " make backspace remove search highlights
 " first one is necessary for ideavim
 nnoremap <bs> :nohlsearch<cr>
