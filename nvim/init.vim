@@ -37,6 +37,10 @@ let g:gofmt_exe = '/usr/bin/gofmt'
 Plug 'muffin4/gofmt.vim', { 'branch': 'no-empty-changes' }
 call plug#end()
 " }}}
+" vim-dispatch {{{
+" type :Copen from vim-dispatch into the command line
+nnoremap mc :Copen
+" }}}
 " Misc {{{
 behave xterm
 filetype plugin indent on
