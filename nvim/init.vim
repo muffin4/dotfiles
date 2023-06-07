@@ -21,6 +21,8 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+" Plug 'xolox/vim-easytags'
+" Plug 'xolox/vim-misc'
 
 " colorschemes
 Plug 'altercation/vim-colors-solarized'
@@ -188,6 +190,7 @@ let mapleader = "\\"
 nmap <space> <leader>
 vmap <space> <leader>
 nnoremap <leader>w :w<cr>
+nnoremap <leader>m :make<cr>
 
 " format whole file using formatexpr or formatprg
 nnoremap <leader>f :normal gggqG<cr>
