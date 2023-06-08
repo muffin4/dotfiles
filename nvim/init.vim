@@ -202,6 +202,17 @@ nnoremap <leader>f :normal gggqG<cr>
 " Clipboard {{{
 nnoremap <leader>p o<esc>p
 nnoremap <leader>P O<esc>p
+" toggle using the system clipboard for all yank, delete, change and put
+" operations which would normally go to the unnamed register
+function! ToggleClipboardUnnamedplus()
+	if strridx(&clipboard, "unnamedplus") == -1
+		set clipboard+=unnamedplus
+	else
+		set clipboard-=unnamedplus
+	endif
+endfunction
+nnoremap <silent> <leader>+ :call ToggleClipboardUnnamedplus()<cr>
+
 " }}}
 " Vimrc {{{
 nnoremap <leader>ve :next $MYVIMRC<cr>
