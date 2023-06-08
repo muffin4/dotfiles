@@ -210,6 +210,7 @@ function! ToggleClipboardUnnamedplus()
 	else
 		set clipboard-=unnamedplus
 	endif
+	set clipboard?
 endfunction
 nnoremap <silent> <leader>+ :call ToggleClipboardUnnamedplus()<cr>
 
