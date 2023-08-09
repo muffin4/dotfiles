@@ -23,6 +23,7 @@ alias view="vim -R"
 alias o="shtart xdg-open"
 
 alias tmuxdotties='tmux new -c ~/dotfiles -s dotties -A'
+alias tmuxpass='tmux new -c ~/.password-store -s pass -A'
 alias tmuxjornal='tmux new -c ~/.jornal -s jornal -A'
 alias sed4='sed -e "1s/..../& /g"'
 
