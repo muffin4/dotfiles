@@ -37,3 +37,5 @@
 # vim: filetype=gitconfig
 [merge]
 	conflictStyle = diff3
+[diff "odf"]
+	textconv = odt2txt
