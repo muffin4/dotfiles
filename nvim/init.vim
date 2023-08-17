@@ -68,6 +68,9 @@ set title
 
 " visual line breaks at 'breakat' characters
 set wrap linebreak
+" Every wrapped line will continue visually indented (same amount of space as
+" the beginning of that line), thus preserving horizontal blocks of text.
+set breakindent
 
 if executable('rg')
 	set grepprg=rg\ --line-number
