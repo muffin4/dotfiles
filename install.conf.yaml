@@ -24,6 +24,7 @@
     ~/.config/paru:
     ~/.config/ranger:
     ~/.config/ripgreprc:
+    ~/.config/speech-dispatcher:
     ~/.config/systemd:
     ~/.config/user-dirs.dirs:
         force: true
