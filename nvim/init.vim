@@ -219,7 +219,7 @@ nnoremap <silent> <leader>+ :call ToggleClipboardUnnamedplus()<cr>
 
 " }}}
 " Vimrc {{{
-nnoremap <leader>ve :next $MYVIMRC<cr>
+nnoremap <leader>ve :edit $MYVIMRC<cr>
 nnoremap <leader>vs :split $MYVIMRC<cr>
 nnoremap <leader>vv :vsplit $MYVIMRC<cr>
 " }}}
