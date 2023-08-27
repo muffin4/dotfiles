@@ -22,6 +22,8 @@ if command -v nvim >/dev/null; then alias vim=nvim; fi
 alias view="vim -R"
 alias o="shtart xdg-open"
 
+alias trash="gio trash"
+
 alias tmuxdotties='tmux new -c ~/dotfiles -s dotties -A'
 alias tmuxpass='tmux new -c ~/.password-store -s pass -A'
 alias tmuxjornal='tmux new -c ~/.jornal -s jornal -A'
