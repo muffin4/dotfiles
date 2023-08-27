@@ -88,6 +88,7 @@ command -nargs=+ MapToggle call MapToggle(<f-args>)
 MapToggle <F1> list
 MapToggle <F2> wrap
 MapToggle <F3> smartcase
+MapToggle <F5> relativenumber
 
 function! ToggleBackground()
 	if &background == "light"
