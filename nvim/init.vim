@@ -257,6 +257,25 @@ endif
 " don't highlight trailing whitespace as error
 let g:go_highlight_trailing_whitespace_error = 0
 " }}}
+" quickfix {{{
+" from: https://vimdoc.sourceforge.net/htmldoc/quickfix.html#:caddexpr
+function CAdd() abort
+	caddexpr expand("%") . ":" . line(".") .  ":" . getline(".")
+endfunction
+command CAdd call CAdd()
+function LAdd() abort
+	laddexpr expand("%") . ":" . line(".") .  ":" . getline(".")
+endfunction
+command LAdd call LAdd()
+function CClear() abort
+	cexpr ""
+endfunction
+command CClear call CClear()
+function LClear() abort
+	lexpr ""
+endfunction
+command LClear call LClear()
+" }}}
 " lsp {{{
 lua << EOF
 local custom_lsp_attach = function(client)
