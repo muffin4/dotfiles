@@ -217,6 +217,7 @@ function! ToggleClipboardUnnamedplus()
 	set clipboard?
 endfunction
 nnoremap <silent> <leader>+ :call ToggleClipboardUnnamedplus()<cr>
+nnoremap <silent> <f6> :call ToggleClipboardUnnamedplus()<cr>
 
 " }}}
 " Vimrc {{{
