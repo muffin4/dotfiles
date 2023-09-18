@@ -78,7 +78,7 @@ endif
 
 set laststatus=2    " always show status line
 
-function! MapToggle(key, option)
+function MapToggle(key, option)
 	let cmd = ':set ' . a:option . '! \| set ' . a:option . '?<cr>'
 	exec 'nnoremap' a:key cmd
 	exec 'inoremap' a:key ' \<C-O>' . cmd
@@ -90,7 +90,7 @@ MapToggle <F2> wrap
 MapToggle <F3> smartcase
 MapToggle <F5> relativenumber
 
-function! ToggleBackground()
+function ToggleBackground()
 	if &background == "light"
 		set background=dark
 	else
@@ -208,7 +208,7 @@ nnoremap <leader>p o<esc>p
 nnoremap <leader>P O<esc>p
 " toggle using the system clipboard for all yank, delete, change and put
 " operations which would normally go to the unnamed register
-function! ToggleClipboardUnnamedplus()
+function ToggleClipboardUnnamedplus()
 	if strridx(&clipboard, "unnamedplus") == -1
 		set clipboard+=unnamedplus
 	else
