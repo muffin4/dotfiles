@@ -143,7 +143,8 @@ set nosmartindent
 set autoindent      " always set autoindenting on
 " }}}
 " UI Layout {{{
-set number          " displays line-numbering at the start of every line
+set number          " print line number in front of each line
+set relativenumber  " show line number relative to line with cursor
 set ruler           " show the cursor position all the time
 set showcmd         " display incomplete commands
 set nocursorline    " don't highlight current line
