@@ -225,6 +225,8 @@ nnoremap <silent> <f6> :call ToggleClipboardUnnamedplus()<cr>
 nnoremap <leader>ve :edit $MYVIMRC<cr>
 nnoremap <leader>vs :split $MYVIMRC<cr>
 nnoremap <leader>vv :vsplit $MYVIMRC<cr>
+" reload / re-execute vimrc;  mnemonic: r for *reload* or *read*
+nnoremap <leader>vr :source $MYVIMRC<cr>
 " }}}
 " Spelling {{{
 "set default spelling languages to english and german
