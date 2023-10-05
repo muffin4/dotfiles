@@ -1,19 +1,85 @@
+[com/github/stunkymonkey/nautilus-open-any-terminal]
+terminal='kitty'
+
+[desktop/ibus/general]
+preload-engines=['anthy', 'xkb:us:colemak:eng']
+use-global-engine=false
+version='1.5.28'
+
+[desktop/ibus/general/hotkey]
+triggers=['<Control><Shift>space']
+
+[desktop/ibus/panel]
+custom-icon='Arc'
+custom-theme='Arc'
+use-custom-icon=true
+use-custom-theme=true
+
+[org/freedesktop/ibus/engine/anthy/common]
+behavior-on-focus-out=2
+
 [org/gnome/GWeather]
 temperature-unit='centigrade'
 
+[org/gnome/GWeather4]
+temperature-unit='centigrade'
+
+[org/gnome/Weather]
+locations=[<(uint32 2, <('Leipzig', 'EDDP', true, [(0.89739012955151531, 0.21351193934287546)], [(0.89535390627309097, 0.21525726859486979)])>)>]
+
+[org/gnome/desktop/calendar]
+show-weekdate=true
+
 [org/gnome/desktop/input-sources]
-sources=[('xkb', 'us+colemak'), ('xkb', 'us')]
-xkb-options=['lv3:ralt_switch', 'ctrl:swapcaps']
+mru-sources=[('xkb', 'us+colemak'), ('ibus', 'anthy'), ('xkb', 'us')]
+per-window=true
+sources=[('xkb', 'us+colemak'), ('xkb', 'us'), ('ibus', 'anthy')]
+xkb-options=['lv3:ralt_switch', 'compose:rwin']
 
 [org/gnome/desktop/interface]
 clock-show-seconds=true
 clock-show-weekday=true
+color-scheme='default'
+cursor-theme='Adwaita'
+document-font-name='Cantarell 12'
+enable-animations=false
+enable-hot-corners=true
+font-antialiasing='grayscale'
+font-hinting='slight'
+font-name='Cantarell 12'
 gtk-enable-primary-paste=true
 gtk-im-module='gtk-im-context-simple'
-gtk-theme='Arc-Dark'
+gtk-theme='Arc'
 icon-theme='Arc'
-monospace-font-name='Fira Code 10'
+locate-pointer=false
+monospace-font-name='Fira Code 12'
 show-battery-percentage=true
+toolkit-accessibility=false
+
+[org/gnome/desktop/notifications/application/com-microsoft-teams]
+application-id='com.microsoft.Teams.desktop'
+enable=false
+enable-sound-alerts=true
+
+[org/gnome/desktop/notifications/application/discord]
+application-id='discord.desktop'
+show-banners=false
+
+[org/gnome/desktop/notifications/application/im-riot-riot]
+application-id='im.riot.Riot.desktop'
+show-banners=false
+
+[org/gnome/desktop/notifications/application/org-mozilla-thunderbird]
+application-id='org.mozilla.Thunderbird.desktop'
+show-banners=false
+
+[org/gnome/desktop/notifications/application/org-telegram-desktop]
+application-id='org.telegram.desktop.desktop'
+show-banners=false
+
+[org/gnome/desktop/notifications/application/signal-desktop]
+application-id='signal-desktop.desktop'
+show-banners=false
 
 [org/gnome/desktop/peripherals/keyboard]
 delay=uint32 250
@@ -26,10 +92,19 @@ speed=0.0
 [org/gnome/desktop/session]
 idle-delay=uint32 0
 
+[org/gnome/desktop/sound]
+allow-volume-above-100-percent=true
+event-sounds=true
+theme-name='freedesktop'
+
 [org/gnome/desktop/wm/keybindings]
-activate-window-menu=@as []
+activate-window-menu=['<Super>F11']
 close=['<Super>w']
-minimize=['<Super>h', '<Super>z']
+maximize=@as []
+maximize-horizontally=['<Alt><Super>h']
+maximize-vertically=['<Alt><Super>v']
+minimize=['<Super>Down']
+show-desktop=['<Shift><Super>h']
 switch-applications=@as []
 switch-applications-backward=@as []
 switch-group=['<Super>grave', '<Alt>grave']
@@ -37,19 +112,121 @@ switch-group-backward=['<Shift><Super>grave', '<Shift><Alt>grave']
 switch-windows=['<Super>Tab', '<Alt>Tab']
 switch-windows-backward=['<Shift><Super>Tab', '<Shift><Alt>Tab']
 toggle-fullscreen=['<Super>f']
+toggle-maximized=['<Super>Up']
+unmaximize=@as []
 
 [org/gnome/desktop/wm/preferences]
+action-double-click-titlebar='toggle-maximize'
+action-middle-click-titlebar='minimize'
 button-layout='appmenu:minimize,maximize,close'
+focus-mode='click'
 resize-with-right-button=true
+titlebar-font='Cantarell Bold 12'
+
+[org/gnome/eog/plugins]
+active-plugins=['statusbar-date', 'reload', 'fullscreen']
+
+[org/gnome/eog/ui]
+image-gallery=true
+sidebar=false
+statusbar=true
+
+[org/gnome/eog/view]
+background-color='rgb(0,0,0)'
+transparency='checked'
+use-background-color=false
+
+[org/gnome/evince/default]
+continuous=false
+dual-page=false
+dual-page-odd-left=false
+enable-spellchecking=true
+fullscreen=false
+inverted-colors=false
+show-sidebar=true
+sidebar-page='thumbnails'
+sidebar-size=144
+sizing-mode='fit-page'
+window-ratio=(2.5647058823529414, 1.6722090261282661)
+
+[org/gnome/gnome-system-monitor]
+cpu-smooth-graph=false
+cpu-stacked-area-chart=true
+current-tab='processes'
+graph-data-points=300
+logarithmic-scale=false
+maximized=false
+network-in-bits=false
+network-total-in-bits=false
+network-total-unit=false
+process-memory-in-iec=true
+resources-memory-in-iec=true
+show-all-fs=false
+show-dependencies=false
+show-whose-processes='all'
+solaris-mode=false
+update-interval=2000
+window-state=(1345, 1080, 648, 152)
+
+[org/gnome/gnome-system-monitor/disktreenew]
+col-0-visible=true
+col-0-width=101
+col-4-visible=true
+col-4-width=0
+col-6-visible=true
+col-6-width=904
+columns-order=[0, 1, 2, 3, 4, 5, 6]
+sort-col=5
+sort-order=1
+
+[org/gnome/gnome-system-monitor/proctree]
+col-11-visible=true
+col-11-width=48
+col-14-visible=true
+col-14-width=120
+columns-order=[0, 1, 2, 3, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+sort-col=23
+sort-order=0
+
+[org/gnome/mutter]
+attach-modal-dialogs=false
+center-new-windows=true
 
 [org/gnome/mutter/keybindings]
 switch-monitor=['<Super><Shift>p', 'XF86Display']
 
+[org/gnome/nautilus/compression]
+default-compression-format='tar.xz'
+
+[org/gnome/nautilus/preferences]
+default-folder-viewer='icon-view'
+fts-enabled=false
+migrated-gtk-settings=true
+recursive-search='local-only'
+search-filter-time-type='last_modified'
+search-view='list-view'
+show-create-link=true
+show-delete-permanently=true
+show-directory-item-counts='local-only'
+show-image-thumbnails='local-only'
+
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=true
+night-light-schedule-automatic=true
+night-light-schedule-from=21.0
+night-light-schedule-to=6.0
+night-light-temperature=uint32 3900
 
 [org/gnome/settings-daemon/plugins/media-keys]
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/']
+magnifier=@as []
+magnifier-zoom-in=@as []
+magnifier-zoom-out=@as []
+mic-mute=@as []
+next=['<Control><Super>Right']
+play=['<Control><Super>p']
+previous=['<Control><Super>Left']
+screensaver=['<Super>l']
 volume-down=['<Shift><Super>underscore']
 volume-mute=['<Shift><Super>m']
 volume-up=['<Shift><Super>plus']
@@ -70,13 +247,68 @@ command='/home/isabelle/.scripts/passmenu.sh -u'
 name='Passmenu for username'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3]
-binding=''
+binding='<Super>Return'
 command='/usr/bin/kitty'
 name='Kitty'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4]
+binding='<Shift><Super>f'
+command='/usr/bin/firefox --new-window'
+name='Firefox, new window'
+
+[org/gnome/shell/extensions/user-theme]
+name='Arc'
+
+[org/gnome/shell/keybindings]
+focus-active-notification=['<Shift><Super>n']
+toggle-message-tray=['<Super>n']
+
+[org/gnome/shell/weather]
+automatic-location=true
+locations=[<(uint32 2, <('Leipzig', 'EDDP', true, [(0.89739012955151531, 0.21351193934287546)], [(0.89535390627309097, 0.21525726859486979)])>)>]
+
+[org/gnome/shell/world-clocks]
+locations=@av []
 
 [org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
 background-color='rgb(237,237,236)'
 bold-is-bright=true
+font='Fira Mono 12'
 palette=['rgb(0,0,0)', 'rgb(204,0,0)', 'rgb(78,154,5)', 'rgb(196,160,0)', 'rgb(52,100,164)', 'rgb(116,80,122)', 'rgb(5,152,154)', 'rgb(211,215,207)', 'rgb(84,87,83)', 'rgb(239,40,40)', 'rgb(138,226,52)', 'rgb(252,233,78)', 'rgb(113,158,207)', 'rgb(173,126,167)', 'rgb(52,226,226)', 'rgb(237,237,236)']
+scrollbar-policy='never'
 use-system-font=false
 use-theme-colors=false
+
+[org/gnome/tweaks]
+show-extensions-notice=false
+
+[org/gtk/gtk4/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+show-size-column=true
+show-type-column=true
+sidebar-width=170
+sort-column='modified'
+sort-directories-first=true
+sort-order='ascending'
+type-format='category'
+view-type='list'
+window-size=(887, 994)
+
+[org/gtk/settings/file-chooser]
+date-format='with-time'
+location-mode='path-bar'
+show-hidden=false
+show-size-column=true
+show-type-column=true
+sidebar-width=188
+sort-column='name'
+sort-directories-first=true
+sort-order='ascending'
+type-format='category'
+window-position=(662, 242)
+window-size=(1203, 902)
+
+[system/locale]
+region='en_GB.UTF-8'
