@@ -37,3 +37,12 @@ type _complete_alias &>/dev/null && while read line; do
         unset _alias
     fi
 done <<< "$(alias -p)"
+
+# edit todo files
+alias todoe="$VISUAL \\
+    /home/isabelle/dotfiles/todo.md \\
+    /home/isabelle/documents/games/chess/todo.md \\
+    /home/isabelle/documents/games/stellaris/wiki-todos.md \\
+    /home/isabelle/documents/games/eso/todo.md \\
+    /home/isabelle/documents/uni/fu/swps/red_potato/todo.md \\
+"
