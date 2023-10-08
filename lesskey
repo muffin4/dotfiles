@@ -1,2 +1,2 @@
 #env
-LESS = --ignore-case --RAW-CONTROL-CHARS --tabs=4
+LESS = --ignore-case --RAW-CONTROL-CHARS --tabs=4 --jump-target=2
