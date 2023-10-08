@@ -60,3 +60,7 @@ tmux-cwd () {
 rgless () {
     rg --pretty "$@" | less -R
 }
+
+fdless () {
+    fd --color=always "$@" | less -R
+}
