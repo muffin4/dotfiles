@@ -193,6 +193,12 @@ endif
 set hidden
 set splitright " open a new window on the right of the currently active with :vs
 set splitbelow " open a new window below the currently active with :vs
+
+" turn the current buffer into a *scratch-buffer*
+command Scratch setlocal buftype=nofile bufhidden=hide noswapfile
+
+" open a new scratch buffer
+command Scratchnew new | Scratch
 " }}}
 " Leader {{{
 let mapleader = "\\"
