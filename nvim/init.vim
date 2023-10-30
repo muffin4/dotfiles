@@ -293,7 +293,7 @@ local custom_lsp_attach = function(client)
 	vim.api.nvim_buf_set_keymap(0, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})
 	vim.api.nvim_buf_set_keymap(0, 'n', '<c-]>', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true})
 	vim.api.nvim_buf_set_keymap(0, 'n', '<leader>r', '<cmd>lua vim.lsp.buf.references()<CR>', {noremap = true})
-	vim.api.nvim_buf_set_keymap(0, 'n', '<leader>d', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', {noremap = true})
+	vim.api.nvim_buf_set_keymap(0, 'n', '<leader>d', '<cmd>lua vim.diagnostic.open_float()<CR>', {noremap = true})
 	-- ... and other keymappings for LSP
 
 	-- Use LSP as the handler for omnifunc.
