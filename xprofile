@@ -1,3 +1,4 @@
 [ -f "${HOME}/.Xdefaults" ] && xrdb -merge "-I${HOME}" "${HOME}/.Xdefaults"
 [ -f "${HOME}/.xset" ] && source "${HOME}/.xset"
 setxkbmap -layout us,us -variant colemak, -option caps:ctrl_modifier
+nvidia-settings --load-config-only
