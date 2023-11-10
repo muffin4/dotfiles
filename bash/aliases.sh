@@ -10,7 +10,6 @@ alias ..='cd ..'
 alias steamlib='find ~/.steam/root/ \( -name "libgpg-error.so*" -o -name "libstdc++.so*" \) -print -delete'
 alias py='python'
 alias pamcan=pacman
-alias g=git
 alias cal='cal --monday'
 alias grep='grep --color=auto --binary-files=without-match'
 alias rg='rg --hidden'
