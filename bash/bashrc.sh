@@ -17,6 +17,9 @@ if [ "$PS1" ]; then
 
     shopt -s globstar
 
+    # List the status of any stopped and running jobs before exiting an interactive shell.
+    shopt -s checkjobs
+
     # disable interpreting ctrl-s and ctrl-q as control flow signals
     stty -ixon
 fi
