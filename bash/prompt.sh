@@ -1,4 +1,8 @@
-VIRTUAL_ENV_DISABLE_PROMPT=y
+__PS1='; '
+PS1=$__PS1
+
+# Allow parameter expansion, command substitution, arithmetic expansion, and quote removal in prompt strings.
+shopt -s promptvars
 
 PROMPT_COMMAND=__prompt_command
 __prompt_command() {
@@ -9,7 +13,6 @@ __prompt_command() {
 		PS1+="$EXIT "
 	fi
 
-	PS1+="; "
+	# include default
+	PS1+=$__PS1
 }
-
-#PS1="; "
