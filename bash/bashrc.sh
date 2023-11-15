@@ -32,3 +32,5 @@ fi
 if [ "$VIRTUAL_ENV" ]; then
     . "$VIRTUAL_ENV/bin/activate"
 fi
+
+# vim: expandtab ts=4 sts=4 sw=4
