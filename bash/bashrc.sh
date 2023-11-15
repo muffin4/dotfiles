@@ -15,6 +15,7 @@ if [ "$PS1" ]; then
     done
     unset config_files
 
+    # The pattern ** used in a pathname expansion context will match all files and zero or more directories and subdirectories. If the pattern is followed by a /, only directories and subdirectories match.
     shopt -s globstar
 
     # List the status of any stopped and running jobs before exiting an interactive shell.
