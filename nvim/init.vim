@@ -78,6 +78,15 @@ endif
 
 set laststatus=2    " always show status line
 
+" List mode: By default, show tabs as ">", trailing spaces as "-", and
+" non-breakable space characters as "+". Useful to see the difference between
+" tabs and spaces and for trailing blanks. Further changed by the 'listchars'
+" option.
+"
+" The cursor is displayed at the start of the space a Tab character occupies,
+" not at the end as usual in Normal mode.
+set list
+
 function MapToggle(key, option)
 	let cmd = ':set ' . a:option . '! \| set ' . a:option . '?<cr>'
 	exec 'nnoremap' a:key cmd
