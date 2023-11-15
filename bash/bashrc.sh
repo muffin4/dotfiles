@@ -18,6 +18,9 @@ if [ "$PS1" ]; then
     # The pattern ** used in a pathname expansion context will match all files and zero or more directories and subdirectories. If the pattern is followed by a /, only directories and subdirectories match.
     shopt -s globstar
 
+    # Treat unset variables and parameters other than the special parameters "@" and "*", or array variables subscripted with "@" or "*", as an error when performing parameter expansion. If ex‐ pansion is attempted on an unset variable or parameter, the shell prints an error message, and, if not interactive, exits with a non-zero status.
+    set -u
+
     # List the status of any stopped and running jobs before exiting an interactive shell.
     shopt -s checkjobs
 
@@ -29,7 +32,7 @@ if [ -f ~/.config/bash/bashrc.local.sh ]; then
     . ~/.config/bash/bashrc.local.sh
 fi
 
-if [ "$VIRTUAL_ENV" ]; then
+if [ -v VIRTUAL_ENV ]; then
     . "$VIRTUAL_ENV/bin/activate"
 fi
 
