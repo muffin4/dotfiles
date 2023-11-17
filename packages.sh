@@ -67,3 +67,5 @@ if ! command -v paru 1>&- ; then
     git clone https://aur.archlinux.org/paru.git && ( cd paru && makepkg -sri )
 fi
 paru -S --needed "${programs[@]}" "${aur_progs[@]}"
+
+# expandtab sts=4 ts=4 sw=4
