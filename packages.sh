@@ -60,6 +60,7 @@ programs=(
     ranger # terminal file browser
 )
 aur_progs=(
+    nautilus-open-any-terminal # Adds opening terminals to context menu. Like kitty.
 )
 
 if ! command -v yay 1>&- ; then
