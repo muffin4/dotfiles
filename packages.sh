@@ -63,7 +63,7 @@ aur_progs=(
     nautilus-open-any-terminal # Adds opening terminals to context menu. Like kitty.
 )
 
-if ! command -v yay 1>&- ; then
-    git clone https://aur.archlinux.org/yay.git && ( cd yay && makepkg -sri )
+if ! command -v paru 1>&- ; then
+    git clone https://aur.archlinux.org/paru.git && ( cd paru && makepkg -sri )
 fi
-yay -S --needed "${programs[@]}" "${aur_progs[@]}"
+paru -S --needed "${programs[@]}" "${aur_progs[@]}"
