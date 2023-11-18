@@ -34,8 +34,8 @@
 [user]
     name = Isa Cichon
     email = isa.ci@posteo.de
-# vim: filetype=gitconfig
 [merge]
-	conflictStyle = diff3
+    conflictStyle = diff3
 [diff "odf"]
-	textconv = odt2txt
+    textconv = odt2txt
+# vim: filetype=gitconfig
