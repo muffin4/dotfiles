@@ -26,6 +26,9 @@ if [ "$PS1" ]; then
 
     # disable interpreting ctrl-s and ctrl-q as control flow signals
     stty -ixon
+
+    # Use a vi-style command line editing interface.
+    set -o vi
 fi
 
 if [ -f ~/.config/bash/bashrc.local.sh ]; then
