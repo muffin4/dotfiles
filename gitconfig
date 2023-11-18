@@ -38,4 +38,4 @@
     conflictStyle = diff3
 [diff "odf"]
     textconv = odt2txt
-# vim: filetype=gitconfig
+# vim: filetype=gitconfig expandtab sts=4 sw=4 ts=4
