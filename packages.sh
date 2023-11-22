@@ -40,6 +40,7 @@ programs=(
     python-keyring # so khal can get posteo password
     pass # password manager
     htop
+    psensor # GTK application for monitoring hardware sensors, like temperature and fan speeds
     python
     xorg-xrandr
     xorg-xset # set keyboard and mouse settings
