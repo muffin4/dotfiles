@@ -31,9 +31,6 @@
     ff = only
 [init]
     defaultBranch = main
-[user]
-    name = Isa Cichon
-    email = isa.ci@posteo.de
 [merge]
     conflictStyle = diff3
 [diff "odf"]
