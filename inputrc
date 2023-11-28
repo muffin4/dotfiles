@@ -7,3 +7,12 @@ Tab: menu-complete
 set menu-complete-display-prefix on
 set show-all-if-ambiguous on
 #set completion-ignore-case on
+
+# From https://unix.stackexchange.com/a/535421
+#set editing-mode vi
+$if mode=vi
+	set keymap vi-command
+	set keymap vi-insert
+	Control-a: beginning-of-line
+	Control-e: end-of-line
+$endif
