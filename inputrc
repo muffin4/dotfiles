@@ -6,7 +6,6 @@ Tab: menu-complete
 "\e[Z": menu-complete-backward
 set menu-complete-display-prefix on
 set show-all-if-ambiguous on
-#set completion-ignore-case on
 
 # From https://unix.stackexchange.com/a/535421
 #set editing-mode vi
