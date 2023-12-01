@@ -29,6 +29,11 @@ if [ "$PS1" ]; then
 
     # Use a vi-style command line editing interface.
     set -o vi
+
+    # History substitutions are not immediately passed to the shell parser. Instead, the expanded line is reloaded into the readline editing buffer for further modification.
+    shopt -s histverify
+    # A failed history substitution will be reloaded into the readline editing buffer for correction.
+    shopt -s histreedit
 fi
 
 if [ -f ~/.config/bash/bashrc.local.sh ]; then
