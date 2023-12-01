@@ -25,6 +25,11 @@ set bell-style visible
 
 # From https://unix.stackexchange.com/a/535421
 $if mode=vi
+	# display current mode
+	set show-mode-in-prompt on
+	set vi-cmd-mode-string "(cmd) "
+	set vi-ins-mode-string "(ins) "
+
 	set keymap vi-command
 	set keymap vi-insert
 	Control-a: beginning-of-line
