@@ -45,3 +45,5 @@ alias todoe="$VISUAL \\
     /home/isabelle/documents/games/eso/todo.md \\
     /home/isabelle/documents/uni/fu/swps/red_potato/todo.md \\
 "
+
+alias xclip="xclip -selection clipboard"
