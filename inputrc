@@ -24,7 +24,6 @@ set keyseq-timeout 35
 set bell-style visible
 
 # From https://unix.stackexchange.com/a/535421
-#set editing-mode vi
 $if mode=vi
 	set keymap vi-command
 	set keymap vi-insert
