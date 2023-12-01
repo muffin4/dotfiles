@@ -47,3 +47,4 @@ alias todoe="$VISUAL \\
 "
 
 alias xclip="xclip -selection clipboard"
+alias xsel="xsel --clipboard"
