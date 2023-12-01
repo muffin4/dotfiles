@@ -7,6 +7,20 @@ Tab: menu-complete
 set menu-complete-display-prefix on
 set show-all-if-ambiguous on
 
+# Specifies the duration readline will wait for a character when reading an
+# ambiguous key sequence (one that can form a complete key sequence using the
+# input read so far, or can take additional input to complete a longer key
+# sequence). If no input is received within the timeout, readline will use the
+# shorter but complete key sequence. The value is specified in milliseconds, so
+# a value of 1000 means that readline will wait one second for additional
+# input. If this variable is set to a value less than or equal to zero, or to a
+# non-numeric value, readline will wait until another key is pressed to decide
+# which key sequence to complete.
+# Set to 35 ms because with the default value of 500 hitting escape while in
+# vi-insert mode would take a noticeable amount of time and make the shell
+# *feel* unresponsive.
+set keyseq-timeout 35
+
 # From https://unix.stackexchange.com/a/535421
 #set editing-mode vi
 $if mode=vi
