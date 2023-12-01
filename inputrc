@@ -37,6 +37,9 @@ $if mode=vi
 	set keymap vi-insert
 	Control-a: beginning-of-line
 	Control-e: end-of-line
+
+	Control-b: backward-char
+	Control-f: forward-char
 $endif
 
 $if mode=emacs
