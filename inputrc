@@ -30,8 +30,17 @@ $if mode=vi
 	set vi-cmd-mode-string "(cmd) "
 	set vi-ins-mode-string "(ins) "
 
+	set keymap vi-move
+
 	set keymap vi-command
+
 	set keymap vi-insert
 	Control-a: beginning-of-line
 	Control-e: end-of-line
+$endif
+
+$if mode=emacs
+	set keymap emacs-standard
+	set keymap emacs-meta
+	set keymap emacs-ctlx
 $endif
