@@ -21,6 +21,8 @@ set show-all-if-ambiguous on
 # *feel* unresponsive.
 set keyseq-timeout 35
 
+set bell-style visible
+
 # From https://unix.stackexchange.com/a/535421
 #set editing-mode vi
 $if mode=vi
