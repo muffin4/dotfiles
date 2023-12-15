@@ -5,6 +5,7 @@ if v:progname =~? "evim"
 endif " }}}
 " vim-plug {{{
 call plug#begin(stdpath('config').'/plugged')
+
 Plug 'bronson/vim-visual-star-search'
 Plug 'preservim/tagbar'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -35,6 +36,12 @@ Plug 'rust-lang/rust.vim'
 " go
 let g:gofmt_exe = '/usr/bin/gofmt'
 Plug 'muffin4/gofmt.vim', { 'branch': 'no-empty-changes' }
+
+" code formatter
+if $USER == "work" || $USER == "sta"
+	Plug 'psf/black'
+endif
+
 call plug#end()
 " }}}
 " vim-dispatch {{{
