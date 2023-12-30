@@ -35,4 +35,6 @@
     conflictStyle = diff3
 [diff "odf"]
     textconv = odt2txt
+[include]
+	path = ~/.gitconfig.local
 # vim: filetype=gitconfig expandtab sts=4 sw=4 ts=4
