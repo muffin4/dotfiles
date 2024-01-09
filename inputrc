@@ -38,7 +38,7 @@ $if mode=vi
 $endif
 
 $if mode=emacs
-	set keymap emacs-standard
 	set keymap emacs-meta
 	set keymap emacs-ctlx
+	set keymap emacs-standard
 $endif
