@@ -58,9 +58,9 @@ tmux-cwd () {
 }
 
 rgless () {
-    rg --pretty "$@" | less -R
+    rg --pretty "$@" | less -R --quit-if-one-screen
 }
 
 fdless () {
-    fd --color=always "$@" | less -R
+    fd --color=always "$@" | less -R --quit-if-one-screen
 }
