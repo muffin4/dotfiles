@@ -16,7 +16,6 @@ alias py='python'
 alias pamcan=pacman
 alias cal='cal --monday'
 alias grep='grep --color=auto --binary-files=without-match'
-alias rg='rg --hidden'
 alias diff="diff --color=auto"
 alias bc="bc --mathlib --quiet"
 alias hibernate="systemctl hibernate"
