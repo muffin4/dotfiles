@@ -330,6 +330,11 @@ if lspconfig.rust_analyzer then -- install rustup-analyzer via pacman
 		on_attach = custom_lsp_attach
 	})
 end
+if lspconfig.ccls then
+	lspconfig.ccls.setup {
+		on_attach = custom_lsp_attach
+	}
+end
 EOF
 " }}}
 
