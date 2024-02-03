@@ -57,10 +57,10 @@ tmux-cwd () {
     tmux command-prompt -I "$(pwd)" -p "New session dir:" "attach -c %1"
 }
 
-rgless () {
+rg () {
     rg --pretty "$@" | less -R --quit-if-one-screen
 }
 
-fdless () {
+fd () {
     fd --color=always "$@" | less -R --quit-if-one-screen
 }
