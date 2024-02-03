@@ -66,6 +66,9 @@ programs=(
 aur_progs=(
     nautilus-open-any-terminal # Adds opening terminals to context menu. Like kitty.
 )
+optional=(
+    ccls # C/C++/ObjC language server
+)
 
 if ! command -v paru 1>&- ; then
     git clone https://aur.archlinux.org/paru.git && ( cd paru && makepkg -sri )
