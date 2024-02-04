@@ -111,6 +111,12 @@ nnoremap <silent> <F4> :call ToggleBackground()<cr>
 inoremap <silent> <F4> <C-O>:call ToggleBackground()<cr>
 
 nnoremap <F8> :TagbarToggle<cr>
+
+" Minimal number of screen lines to keep above and below the cursor. This will
+" make some context visible around where you are working.  If you set it to a
+" very large value (999) the cursor line will always be in the middle of the
+" window (except at the start or end of the file or when long lines wrap).
+set scrolloff=0
 " }}}
 " Mouse {{{
 if has('mouse') " use the mouse if compiled with support for mouse
