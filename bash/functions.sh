@@ -1,4 +1,4 @@
-# vim : filetype=zsh
+# vim : filetype=bash
 sleepuntil () {
     if [[ "$#" != 1 ]] ; then echo "Usage: sleepuntil timestamp" ; return 1 ; fi
     local then="$(date -d "$1" +%s)"
