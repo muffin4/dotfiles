@@ -42,7 +42,12 @@ call plug#end()
 nnoremap mc :Copen
 " }}}
 " Misc {{{
-behave xterm
+"
+" 'behave' was removed in neovim 0.10
+" See https://neovim.io/doc/user/news-0.10.html
+"behave xterm
+set mousemodel=extend
+
 filetype plugin indent on
 
 " allow backspacing over everything in insert mode
