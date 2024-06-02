@@ -57,3 +57,4 @@
     - [lesskey, Loading lesskey configuration]
     - [xdg-mime default org.gnome.Evince.desktop application/pdf, Making evince the default application for pdf files]
     - [ln -sf themes/Tango_Light.conf kitty/theme.conf, Set default kitty theme]
+    - [mkdir -p ~/.local/share/mpd/playlists, Creating directories required by MPD]
