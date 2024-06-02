@@ -19,6 +19,7 @@
     ~/.config/gtk-3.0: gtk/gtk-3.0
     ~/.config/khal:
     ~/.config/kitty:
+    ~/.config/mpd:
     ~/.config/mpv:
     ~/.config/nvim:
     ~/.config/paru:
