@@ -61,7 +61,6 @@ programs=(
     ranger # terminal file browser
 
     mpd # a daemon for playing music
-    ario # a GTK2 client for MPD
 
     openttd # OpenTTD is an open source simulation game based upon the popular Microprose game "Transport Tycoon Deluxe", written by Chris Sawyer. It attempts to mimic the original game as closely as possible while extending it with new features. It has trains.
     openttd-opengfx openttd-opensfx # open graphics and sounds for OpenTTD
