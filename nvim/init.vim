@@ -78,7 +78,7 @@ set wrap linebreak
 set breakindent
 
 if executable('rg')
-	set grepprg=rg\ --line-number
+	set grepprg=rg\ --vimgrep
 endif
 
 set laststatus=2    " always show status line
