@@ -170,14 +170,16 @@ set showcmd         " display incomplete commands
 set nocursorline    " don't highlight current line
 set wildmenu        " add a menu for command-line completion (like in :e foo<TAB>)
 set lazyredraw      " don't redraw while executing macros, registers, or other commands that have not been typed
-set guioptions+=c   " use console dialogs instead of popup dialogs for simple choices
-set guioptions-=m   " menubar
-set guioptions-=T   " toolbar
-set guioptions-=r   " right-hand scrollbar
-set guioptions-=l   " left-hand scrollbar
-set guioptions-=R   " right-hand scrollbar when there is a vertically split window
-set guioptions-=L   " left-hand scrollbar when there is a vertically split window
-set guioptions-=b   " bottom scrollbar
+if exists('+guioptions') " Check if guioptions are actually supported. See :h hidden-options
+	set guioptions+=c   " use console dialogs instead of popup dialogs for simple choices
+	set guioptions-=m   " menubar
+	set guioptions-=T   " toolbar
+	set guioptions-=r   " right-hand scrollbar
+	set guioptions-=l   " left-hand scrollbar
+	set guioptions-=R   " right-hand scrollbar when there is a vertically split window
+	set guioptions-=L   " left-hand scrollbar when there is a vertically split window
+	set guioptions-=b   " bottom scrollbar
+endif
 set guicursor=n-v-c-ve-o-i-ci-r-cr-sm:block-Cursor/lCursor-blinkoff0
 " }}}
 " Searching {{{
