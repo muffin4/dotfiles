@@ -23,6 +23,7 @@ alias v=vim
 if command -v nvim >/dev/null; then alias vim=nvim; fi
 alias view="vim -R"
 alias o="shtart xdg-open"
+alias files="nautilus"
 
 alias trash="gio trash"
 
