@@ -1,0 +1,9 @@
+[Unit]
+Description=Set a random background image
+
+[Service]
+Type=simple
+ExecStart=%h/.cargo/bin/random-wallpaper
+
+[Install]
+WantedBy=default.target
