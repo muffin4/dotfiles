@@ -34,6 +34,10 @@ if [ "$PS1" ]; then
     shopt -s histverify
     # A failed history substitution will be reloaded into the readline editing buffer for correction.
     shopt -s histreedit
+
+    # Command substitution inherits the value of the errexit option, instead of
+    # unsetting it in the subshell environment.
+    shopt -s inherit_errexit
 fi
 
 if [ -f ~/.config/bash/bashrc.local.sh ]; then
