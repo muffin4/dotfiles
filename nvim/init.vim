@@ -332,22 +332,10 @@ local custom_lsp_attach = function(client)
 	)
 end
 
-local lspconfig = require('lspconfig')
-if lspconfig.pylsp then
-	lspconfig.pylsp.setup({
-		on_attach = custom_lsp_attach
-	})
-end
-if lspconfig.rust_analyzer then -- install rustup-analyzer via pacman
-	lspconfig.rust_analyzer.setup({
-		on_attach = custom_lsp_attach
-	})
-end
-if lspconfig.ccls then
-	lspconfig.ccls.setup {
-		on_attach = custom_lsp_attach
-	}
-end
+vim.lsp.config('*', {
+	on_attach = custom_lsp_attach
+})
+vim.lsp.enable({'pylsp', 'rust_analyzer', 'ccls'})
 EOF
 " }}}
 
