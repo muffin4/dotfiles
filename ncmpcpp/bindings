@@ -560,3 +560,4 @@ def_key "9"
 #def_key "q"
 #  quit
 #
+# vim: expandtab softtabstop=2 shiftwidth=2
