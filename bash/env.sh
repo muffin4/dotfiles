@@ -8,4 +8,5 @@ export LESSHISTFILE=/dev/null
 export RIPGREP_CONFIG_PATH="${XDG_CONFIG_HOME:-"$HOME/.config"}/ripgreprc"
 export TMUX_TMPDIR="${XDG_RUNTIME_DIR}"
 export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
+export XKB_DEFAULT_LAYOUT="us(colemak)"
 export XZ_DEFAULTS=--threads=0
