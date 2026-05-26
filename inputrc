@@ -44,3 +44,4 @@ $if mode=emacs
 $endif
 
 set completion-ignore-case
+set colored-completion-prefix
