@@ -42,3 +42,5 @@ $if mode=emacs
 	set keymap emacs-ctlx
 	set keymap emacs-standard
 $endif
+
+set completion-ignore-case
