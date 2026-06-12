@@ -23,7 +23,6 @@
     ~/.config/mpd:
     ~/.config/mpv:
     ~/.config/ncmpcpp:
-    ~/.config/nvim:
     ~/.config/paru:
     ~/.config/ranger:
     ~/.config/ripgreprc:
@@ -36,7 +35,7 @@
     ~/.bash_profile: bash/profile.sh
     ~/.bashrc: bash/bashrc.sh
     ~/.ssh:
-    ~/.vim: nvim
+    ~/.vim: vim
     ~/.icons:
     ~/.ideavimrc:
     ~/.inputrc:

@@ -2,7 +2,6 @@
 set -eu
 programs=(
     pacman-contrib # rankmirros
-    neovim
     python-pynvim # python client for neovim
     editorconfig-core-c
     firefox # emergency web browser
@@ -68,6 +67,8 @@ programs=(
 )
 aur_progs=(
     nautilus-open-any-terminal # Adds opening terminals to context menu. Like kitty.
+    vim-classic-runtime-git
+    gvim-classic-git
 )
 optional=(
     ccls # C/C++/ObjC language server

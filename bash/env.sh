@@ -1,6 +1,6 @@
 export BAT_THEME="gruvbox-dark"
 
-export VISUAL=nvim
+export VISUAL=vim
 export EDITOR=$VISUAL
 [ "$TERM" = "xterm" ] && export TERM=xterm-256color
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'

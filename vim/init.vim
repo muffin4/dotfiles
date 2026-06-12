@@ -4,7 +4,7 @@ if v:progname =~? "evim"
 	finish
 endif " }}}
 " vim-plug {{{
-call plug#begin(stdpath('config').'/plugged')
+call plug#begin('~/.vim/plugged')
 Plug 'bronson/vim-visual-star-search'
 Plug 'preservim/tagbar'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -307,36 +307,36 @@ endfunction
 command LClear call LClear()
 " }}}
 " lsp {{{
-lua << EOF
-local custom_lsp_attach = function(client)
-	-- See `:help nvim_buf_set_keymap()` for more information
-	vim.api.nvim_buf_set_keymap(0, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})
-	vim.api.nvim_buf_set_keymap(0, 'n', '<c-]>', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true})
-	vim.api.nvim_buf_set_keymap(0, 'n', '<leader>r', '<cmd>lua vim.lsp.buf.references()<CR>', {noremap = true})
-	vim.api.nvim_buf_set_keymap(0, 'n', '<leader>d', '<cmd>lua vim.diagnostic.open_float()<CR>', {noremap = true})
-	-- ... and other keymappings for LSP
-
-	-- Use LSP as the handler for omnifunc.
-	--		See `:help omnifunc` and `:help ins-completion` for more information.
-	vim.api.nvim_buf_set_option(0, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-
-	-- For plugins with an `on_attach` callback, call them here. For example:
-	-- require('completion').on_attach()
-
-	-- remove annoying default diagnostics display
-	vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-		vim.lsp.diagnostic.on_publish_diagnostics, {
-			-- Disable virtual text
-			virtual_text = false,
-		}
-	)
-end
-
-vim.lsp.config('*', {
-	on_attach = custom_lsp_attach
-})
-vim.lsp.enable({'pylsp', 'rust_analyzer', 'ccls'})
-EOF
+"lua << EOF
+"local custom_lsp_attach = function(client)
+"	-- See `:help nvim_buf_set_keymap()` for more information
+"	vim.api.nvim_buf_set_keymap(0, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})
+"	vim.api.nvim_buf_set_keymap(0, 'n', '<c-]>', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true})
+"	vim.api.nvim_buf_set_keymap(0, 'n', '<leader>r', '<cmd>lua vim.lsp.buf.references()<CR>', {noremap = true})
+"	vim.api.nvim_buf_set_keymap(0, 'n', '<leader>d', '<cmd>lua vim.diagnostic.open_float()<CR>', {noremap = true})
+"	-- ... and other keymappings for LSP
+"
+"	-- Use LSP as the handler for omnifunc.
+"	--		See `:help omnifunc` and `:help ins-completion` for more information.
+"	vim.api.nvim_buf_set_option(0, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+"
+"	-- For plugins with an `on_attach` callback, call them here. For example:
+"	-- require('completion').on_attach()
+"
+"	-- remove annoying default diagnostics display
+"	vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+"		vim.lsp.diagnostic.on_publish_diagnostics, {
+"			-- Disable virtual text
+"			virtual_text = false,
+"		}
+"	)
+"end
+"
+"vim.lsp.config('*', {
+"	on_attach = custom_lsp_attach
+"})
+"vim.lsp.enable({'pylsp', 'rust_analyzer', 'ccls'})
+"EOF
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
