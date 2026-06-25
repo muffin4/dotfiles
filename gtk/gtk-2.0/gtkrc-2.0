@@ -1,8 +1,5 @@
-include "/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc"
-style "user-font"
-{
-	font_name="Fira Mono"
-}
-widget_class "*" style "user-font"
-gtk-font-name="Fira Mono 9"
-gtk-icon-theme-name="Arc"
+# created by KDE Plasma, Thu Jun 25 18:09:23 2026
+#
+
+gtk-alternative-button-order = 1
+
