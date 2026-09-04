@@ -35,6 +35,12 @@ Plug 'rust-lang/rust.vim'
 " go
 let g:gofmt_exe = '/usr/bin/gofmt'
 Plug 'muffin4/gofmt.vim', { 'branch': 'no-empty-changes' }
+
+" neoformat for Prettier support
+Plug 'sbdchd/neoformat'
+autocmd BufWritePre *.js Neoformat
+autocmd BufWritePre,TextChanged,InsertLeave *.js,*.ts Neoformat
+
 call plug#end()
 " }}}
 " vim-dispatch {{{
