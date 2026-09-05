@@ -38,7 +38,12 @@ Plug 'muffin4/gofmt.vim', { 'branch': 'no-empty-changes' }
 
 " neoformat for Prettier support
 Plug 'sbdchd/neoformat'
-autocmd BufWritePre,TextChanged,InsertLeave *.js,*.ts Neoformat
+autocmd BufWritePre *.js,*.ts Neoformat
+autocmd FileType javascript setlocal formatprg=prettier
+" Use formatprg when available
+let g:neoformat_try_formatprg = 1
+" use a project-local version of Prettier
+let g:neoformat_try_node_exe = 1
 
 call plug#end()
 " }}}
